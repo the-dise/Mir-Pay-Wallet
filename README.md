@@ -1,7 +1,5 @@
 # Mir Pay Companion for Wear OS
 
-## Screenshots
-
 ![screenshot](https://github.com/the-dise/Mir-Pay-Companion/blob/main/images/Screenshot_20240131_093552.png)
 
 ## Description
