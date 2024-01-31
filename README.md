@@ -42,4 +42,6 @@ Mir Pay Companion is licensed under the [GPL-3.0 License](https://github.com/the
 
 - Gorban - original idea;
 
-Made with ❤️ by Dise
+-----
+
+<p align="center">Made with ❤️ by Dise</p>
