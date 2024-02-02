@@ -8,9 +8,13 @@ Mir Pay Companion is an Android application designed to enhance the Mir Pay expe
 
 ## Features
 
-- Screen On During Transaction: Prevents the screen from turning off during Mir Pay transactions, ensuring a smooth and successful payment experience;
-- Tap the card to reset the timer;
+- The application is launched via **Complication**, a shortcut in the list of all applications opens the settings;
+- 13 different card designs to suit your taste;
 - Auto close application when timer expires.
+
+## Cards Design 
+
+![gallery](/images/cards-preview.png)
 
 ## Installation
 
