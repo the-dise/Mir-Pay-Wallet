@@ -1,12 +1,28 @@
 <resources>
-    <string name="app_name">Mir Pay</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">From the Square world,\nHello, %1$s!</string>
-    <string name="tile_label">Mir Pay Tile</string>
-    <string name="complication_label">Mir Pay</string>
-    <string name="logo_description">Mir Pay Logo</string>
-    <string name="reset_the_timer">Press the card to reset the timer</string>
+    <string name="app_name">Mir Pay Companion</string>
+    <string name="mir_pay">Mir Pay</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_timer_title">Select timer</string>
+    <string name="settings_card_title">Card</string>
+    <string name="settings_enter_ms">Enter ms</string>
+    <string name="settings_choose_card">Choose card</string>
+
+    <string name="card_default_title">Default</string>
+
+    <string name="card_secret_garden">Secret Garden</string>
+    <string name="card_swiss_plum">Swiss Plum</string>
+    <string name="card_light_coral">Light Coral</string>
+    <string name="card_poppy_pompadour">Poppy Pompadour</string>
+    <string name="card_spiced_nectarine">Spiced Nectarine</string>
+    <string name="card_stargate_shimmer">Stargate Shimmer</string>
+    <string name="card_vega_violet">Vega Violet</string>
+    <string name="card_wonder_lust">Wonder Lust</string>
+
+    <string name="card_alpha_title">Alpha</string>
+    <string name="card_rosbank_title">Rosbank</string>
+    <string name="card_sberbank_title">SberBank</string>
+    <string name="card_tinkoff_title">Tinkoff</string>
+    <string name="card_psb_title">PSB</string>
+
 </resources>

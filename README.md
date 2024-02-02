@@ -1,6 +1,6 @@
 # Mir Pay Companion for Wear OS
 
-![screenshot](https://github.com/the-dise/Mir-Pay-Companion/blob/main/images/Screenshot_20240131_093552.png)
+![screenshot](/images/Screenshot_20240131_093552.png)
 
 ## Description
 
@@ -11,13 +11,6 @@ Mir Pay Companion is an Android application designed to enhance the Mir Pay expe
 - Screen On During Transaction: Prevents the screen from turning off during Mir Pay transactions, ensuring a smooth and successful payment experience;
 - Tap the card to reset the timer;
 - Auto close application when timer expires.
-
-## Roadmap
-
-Things I want to do:
-
-- [ ] Changing the timer time;
-- [ ] Several card designs.
 
 ## Installation
 
@@ -41,6 +34,7 @@ Mir Pay Companion is licensed under the [GPL-3.0 License](https://github.com/the
 ## Acknowledgments
 
 - Gorban - original idea;
+- [s44khin](https://github.com/s44khin/MirPayTimer)
 
 -----
 

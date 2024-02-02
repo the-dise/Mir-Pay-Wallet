@@ -12,4 +12,6 @@
 
     <color name="color_error">#b00020</color>
     <color name="color_on_primary">#ffffff</color>
+    <color name="card_alpha_color">#FF1100</color>
+    <color name="card_default_color">#ff0F9A59</color>
 </resources>
