@@ -1,6 +1,6 @@
 # Mir Pay Companion for Wear OS
 
-![screenshot](/images/preview.png)
+<img src="https://github.com/the-dise/Mir-Pay-Companion/blob/main/images/preview.png?raw=true" width="512" height="512">
 
 ## Description
 
