@@ -22,6 +22,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -71,7 +72,4 @@ dependencies {
     // Wear
     implementation "androidx.wear.watchface:watchface-complications-data-source-ktx:1.2.1"
     implementation "androidx.wear:wear-input:1.2.0-alpha02"
-
-    // An image loading library for Android backed by Kotlin Coroutines
-    implementation("io.coil-kt:coil-compose:2.5.0")
 }
