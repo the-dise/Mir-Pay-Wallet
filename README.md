@@ -1,6 +1,6 @@
 # Mir Pay Companion for Wear OS
 
-![screenshot](/images/Screenshot_20240131_093552.png)
+![screenshot](/images/preview.png)
 
 ## Description
 
