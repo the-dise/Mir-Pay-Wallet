@@ -3,19 +3,16 @@ package me.thedise.mirpayinvoke.settings.widgets
 import android.app.RemoteInput
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.wear.compose.material.ScalingLazyListScope
+import androidx.wear.compose.foundation.lazy.ScalingLazyListScope
+import androidx.wear.compose.material.CardDefaults
+import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
+import androidx.wear.compose.material.TitleCard
 import androidx.wear.input.RemoteInputIntentHelper
 import me.thedise.mirpayinvoke.R
 import me.thedise.mirpayinvoke.common.DEFAULT_TIMER
@@ -43,22 +40,14 @@ fun ScalingLazyListScope.timerBlock(
 
     val label = stringResource(R.string.settings_enter_ms)
 
-    DefaultBox(onClick = { launcher.launch(createIntent(label)) }) {
-        Column {
-
-            Text(
-                modifier = Modifier.padding(start = 16.dp, top = 8.dp),
-                text = stringResource(R.string.settings_timer_title),
-                fontSize = 12.sp,
-                fontWeight = FontWeight.Bold,
-            )
-
-            Text(
-                modifier = Modifier.padding(start = 16.dp, bottom = 8.dp),
-                text = newTimer.toString(),
-                fontSize = 10.sp,
-            )
-        }
+    TitleCard(
+        onClick = { launcher.launch(createIntent(label)) },
+        title = { Text(stringResource(R.string.settings_timer_title)) },
+        backgroundPainter = CardDefaults.cardBackgroundPainter(),
+        contentColor = MaterialTheme.colors.onSurfaceVariant,
+        titleColor = MaterialTheme.colors.onSurface,
+    ) {
+        Text(newTimer.toString())
     }
 }
 
