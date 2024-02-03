@@ -20,8 +20,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.Icon
 import androidx.wear.compose.material.Text
@@ -37,14 +37,6 @@ fun MirPayScreen(
     onTimerEnd: () -> Unit,
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
-
-    // Google Sans Medium font
-    val googleSansMedium = FontFamily(
-        Font(R.font.google_sans_medium)
-    )
-    val googleSansRegular = FontFamily(
-        Font(R.font.google_sans_regular)
-    )
 
     LaunchedEffect(Unit) {
         while (currentTicks != maxTicks) {
@@ -83,14 +75,15 @@ fun MirPayScreen(
 
             Text(
                 text = "Mir",
-                fontFamily = googleSansMedium,
+                fontFamily = googleSans,
+                fontWeight = FontWeight.Bold,
             )
 
             Spacer(modifier = Modifier.width(2.dp))
 
             Text(
                 text = "Pay",
-                fontFamily = googleSansRegular,
+                fontFamily = googleSans,
             )
         }
 
@@ -110,17 +103,18 @@ fun MirPayScreen(
                 .align(Alignment.TopCenter),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            /*Icon(
-                modifier = Modifier.size(16.dp),
-                painter = painterResource(R.drawable.ic_outline_access_time_24),
-                contentDescription = null
-            )
-
-            Spacer(modifier = Modifier.width(4.dp))*/
-
             AnimatedCounter(
                 count = (maxTicks - currentTicks)
             )
         }
     }
 }
+
+@Preview(device = "id:wearos_small_round")
+@Composable
+fun MirPayScreenPreview(modifier: Modifier = Modifier) {
+    MirPayScreen(maxTicks = 15, card = Card.DEFAULT) {
+        
+    }
+}
+
