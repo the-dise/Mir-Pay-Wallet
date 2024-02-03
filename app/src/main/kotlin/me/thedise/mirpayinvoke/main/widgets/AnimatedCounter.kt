@@ -6,7 +6,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.animation.with
+import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
@@ -22,7 +22,7 @@ fun AnimatedCounter(
         modifier = modifier,
         targetState = count,
         transitionSpec = {
-            slideInVertically { it } + fadeIn() with slideOutVertically { -it } + fadeOut()
+            (slideInVertically { it } + fadeIn()).togetherWith(slideOutVertically { -it } + fadeOut())
         }, label = "countdown"
     ) {
         Text(

@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package me.thedise.mirpayinvoke.settings.widgets
 
 import android.app.RemoteInput
@@ -45,7 +43,7 @@ fun ScalingLazyListScope.cardBlock(
         backgroundPainter = CardDefaults.imageWithScrimBackgroundPainter(
             backgroundImagePainter = painterResource(id = newCard.backgroundId),
 
-        ),
+            ),
         contentColor = MaterialTheme.colors.onSurface,
         titleColor = MaterialTheme.colors.onSurface
     ) {
