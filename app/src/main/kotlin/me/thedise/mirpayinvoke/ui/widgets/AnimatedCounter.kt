@@ -1,7 +1,6 @@
-package me.thedise.mirpayinvoke.main.widgets
+package me.thedise.mirpayinvoke.ui.widgets
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
@@ -11,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import androidx.wear.compose.material.Text
+import me.thedise.mirpayinvoke.main.theme.googleSans
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AnimatedCounter(
     modifier: Modifier = Modifier,

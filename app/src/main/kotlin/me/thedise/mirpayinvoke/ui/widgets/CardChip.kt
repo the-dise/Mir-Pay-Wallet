@@ -1,4 +1,4 @@
-package me.thedise.mirpayinvoke.settings.widgets
+package me.thedise.mirpayinvoke.ui.widgets
 
 import android.app.RemoteInput
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -20,7 +20,7 @@ import me.thedise.mirpayinvoke.common.Card
 
 private const val CARD_KEY = "card"
 
-fun ScalingLazyListScope.cardBlock(
+fun ScalingLazyListScope.cardChip(
     currentCard: Card,
     onChangeCard: (Card) -> Unit
 ) = item {

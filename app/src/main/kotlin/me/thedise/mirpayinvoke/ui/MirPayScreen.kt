@@ -1,4 +1,4 @@
-package me.thedise.mirpayinvoke.main.widgets
+package me.thedise.mirpayinvoke.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -28,6 +28,8 @@ import androidx.wear.compose.material.Text
 import kotlinx.coroutines.delay
 import me.thedise.mirpayinvoke.R
 import me.thedise.mirpayinvoke.common.Card
+import me.thedise.mirpayinvoke.main.theme.googleSans
+import me.thedise.mirpayinvoke.ui.widgets.AnimatedCounter
 import kotlin.time.Duration.Companion.seconds
 
 @Composable
@@ -114,7 +116,7 @@ fun MirPayScreen(
 @Composable
 fun MirPayScreenPreview(modifier: Modifier = Modifier) {
     MirPayScreen(maxTicks = 15, card = Card.DEFAULT) {
-        
+
     }
 }
 

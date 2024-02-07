@@ -1,4 +1,4 @@
-package me.thedise.mirpayinvoke.settings.widgets
+package me.thedise.mirpayinvoke.ui.widgets
 
 import android.app.RemoteInput
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -23,7 +23,7 @@ private val DEFAULT_VALUES = arrayOf(
     "55", "60"
 )
 
-fun ScalingLazyListScope.timerBlock(
+fun ScalingLazyListScope.timerChip(
     currentTicks: Int,
     onChangeTimer: (Int) -> Unit,
 ) = item {

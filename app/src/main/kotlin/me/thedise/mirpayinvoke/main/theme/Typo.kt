@@ -1,4 +1,4 @@
-package me.thedise.mirpayinvoke.main.widgets
+package me.thedise.mirpayinvoke.main.theme
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily

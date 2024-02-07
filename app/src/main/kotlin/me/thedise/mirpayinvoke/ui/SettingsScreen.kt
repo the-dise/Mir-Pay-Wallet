@@ -1,4 +1,4 @@
-package me.thedise.mirpayinvoke.settings.widgets
+package me.thedise.mirpayinvoke.ui
 
 import android.content.Intent
 import androidx.compose.foundation.background
@@ -34,6 +34,8 @@ import kotlinx.coroutines.launch
 import me.thedise.mirpayinvoke.R
 import me.thedise.mirpayinvoke.common.Card
 import me.thedise.mirpayinvoke.main.MainActivity
+import me.thedise.mirpayinvoke.ui.widgets.cardChip
+import me.thedise.mirpayinvoke.ui.widgets.timerChip
 
 @OptIn(ExperimentalWearFoundationApi::class)
 @Composable
@@ -85,19 +87,16 @@ fun SettingsScreen(
                     style = MaterialTheme.typography.title3,
                 )
             }
-            spacer(4.dp)
 
-            timerBlock(
+            timerChip(
                 currentTicks = timerTicks,
                 onChangeTimer = onChangeTimer,
             )
 
-            cardBlock(
+            cardChip(
                 currentCard = card,
                 onChangeCard = onChangeCard
             )
-
-            spacer(8.dp)
 
             item {
                 Button(onClick = { context.startActivity(intent) }) {
