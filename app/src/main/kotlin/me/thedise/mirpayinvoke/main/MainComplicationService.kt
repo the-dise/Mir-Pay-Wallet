@@ -38,7 +38,7 @@ class MainComplicationService : SuspendingComplicationDataSourceService() {
             applicationContext,
             R.drawable.ic_wallet_24
         ))
-        val contentDescription = PlainComplicationText.Builder(getText(R.string.mir_pay_complication)).build()
+        val contentDescription = PlainComplicationText.Builder(getText(R.string.complication_provider_label)).build()
 
         return MonochromaticImageComplicationData.Builder(
             monochromaticImageBuilder.build(),

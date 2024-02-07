@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">Mir Pay Companion</string>
 
-    <string name="app_name_main">Mir Pay Companion</string>
-    <string name="app_name_settings">Mir Pay Settings</string>
-
-    <string name="mir_pay_complication">Mir Pay</string>
+    <string name="complication_provider_label">Quick start</string>
 
     <!-- Settings -->
     <string name="settings_title">Settings</string>
