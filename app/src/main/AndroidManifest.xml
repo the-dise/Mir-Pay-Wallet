@@ -15,23 +15,8 @@
         <!-- Mir Pay Companion -->
         <activity
             android:name=".main.MainActivity"
-            android:label="@string/app_name_main"
             android:exported="true"
             android:taskAffinity="me.thedise.mirpayinvoke.CompanionTask"
-            android:theme="@android:style/Theme.DeviceDefault">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Mir Pay Settings -->
-        <activity
-            android:name=".settings.SettingsActivity"
-            android:label="@string/app_name_settings"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher_settings"
-            android:taskAffinity="me.thedise.mirpayinvoke.SettingsTask"
             android:theme="@android:style/Theme.DeviceDefault">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +28,7 @@
             android:name=".main.MainComplicationService"
             android:exported="true"
             android:icon="@drawable/ic_wallet_24"
-            android:label="@string/mir_pay_complication"
+            android:label="@string/complication_provider_label"
             android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
