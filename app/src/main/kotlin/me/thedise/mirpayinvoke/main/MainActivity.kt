@@ -11,7 +11,6 @@ import me.thedise.mirpayinvoke.common.PREFS_NAME
 import me.thedise.mirpayinvoke.ui.WearApp
 
 class MainActivity : ComponentActivity() {
-    private val tag = "MyActivity"
 
     private val appStorage by lazy {
         AppStorage(sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE))
@@ -24,10 +23,7 @@ class MainActivity : ComponentActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         setContent {
-            WearApp(
-                appStorage = appStorage,
-                onTimerEnd = { finish() }
-            )
+            WearApp(appStorage = appStorage, onTimerEnd = { finish() })
         }
     }
 
