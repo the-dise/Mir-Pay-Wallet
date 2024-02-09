@@ -11,15 +11,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
 
-        <!-- Mir Pay Companion -->
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
         <activity
             android:name=".main.MainActivity"
             android:exported="true"
             android:taskAffinity="me.thedise.mirpayinvoke.CompanionTask"
-            android:theme="@android:style/Theme.DeviceDefault">
+            android:theme="@style/MainActivityTheme.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -41,14 +52,6 @@
                 android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS"
                 android:value="0" />
         </service>
-
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
-
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
     </application>
 
 </manifest>

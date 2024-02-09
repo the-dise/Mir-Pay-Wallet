@@ -4,33 +4,31 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.wear.compose.material.Icon
-import androidx.wear.compose.material.Text
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import me.thedise.mirpayinvoke.R
+import kotlinx.coroutines.launch
 import me.thedise.mirpayinvoke.common.Card
-import me.thedise.mirpayinvoke.main.theme.googleSans
 import me.thedise.mirpayinvoke.ui.widgets.AnimatedCounter
-import kotlin.time.Duration.Companion.seconds
+import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 
 @Composable
 fun MirPayScreen(
@@ -39,82 +37,78 @@ fun MirPayScreen(
     onTimerEnd: () -> Unit,
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
-
-    LaunchedEffect(Unit) {
-        while (currentTicks != maxTicks) {
-            delay(1.seconds)
-            currentTicks++
-
-            if (currentTicks == maxTicks) {
-                onTimerEnd()
-            }
-        }
-    }
+    var timerJob by remember { mutableStateOf<Job?>(null) }
 
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .padding(
+                horizontal = 16.dp, vertical = 16.dp
+            )
             .background(
                 brush = Brush.radialGradient(
-                    colors = listOf(Color(card.colorId), Color.Black),
-                    radius = 175f
+                    colors = listOf(
+                        Color(card.colorId.toInt()).copy(alpha = 1f), Color.Black
+                    )
                 )
             )
     ) {
         Row(
-            modifier = Modifier
-                .padding(top = 16.dp)
-                .align(Alignment.TopCenter),
+            modifier = Modifier.align(Alignment.TopCenter),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                modifier = Modifier.size(16.dp),
-                painter = painterResource(R.drawable.ic_wallet_24),
-                contentDescription = null
-            )
-
-            Spacer(modifier = Modifier.width(4.dp))
-
-            Text(
-                text = "Mir",
-                fontFamily = googleSans,
-                fontWeight = FontWeight.Bold,
-            )
-
-            Spacer(modifier = Modifier.width(2.dp))
-
-            Text(
-                text = "Pay",
-                fontFamily = googleSans,
-            )
+            LogoBlock()
         }
 
         Image(
             modifier = Modifier
-                .padding(0.dp, 4.dp, 0.dp, 0.dp)
-                .width(172.dp)
-                .align(Alignment.Center),
-            painter = painterResource(card.imageId),
-            contentDescription = null
+                .align(Alignment.Center)
+                .padding(horizontal = 8.dp)
+                .shadow(
+                    elevation = 16.dp,
+                    clip = true,
+                    shape = RoundedCornerShape(8.dp),
+                    spotColor = Color.Black
+                ), painter = painterResource(card.imageId), contentDescription = null
         )
 
         Row(
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 16.dp)
-                .align(Alignment.TopCenter),
-            verticalAlignment = Alignment.CenterVertically
+            modifier = Modifier.align(Alignment.BottomCenter),
         ) {
             AnimatedCounter(
-                count = (maxTicks - currentTicks)
+                count = (maxTicks - currentTicks),
             )
+        }
+    }
+
+    LaunchedEffect(Unit) {
+        timerJob = launch {
+            while (currentTicks != maxTicks) {
+                delay(1000)
+                currentTicks++
+
+                if (currentTicks == maxTicks) {
+                    onTimerEnd()
+                }
+            }
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            timerJob?.cancel()
         }
     }
 }
 
-@Preview(device = "id:wearos_small_round")
+@Preview(
+    device = "id:wearos_small_round",
+    showSystemUi = true,
+    backgroundColor = 0xFF000000,
+    showBackground = true
+)
 @Composable
-fun MirPayScreenPreview(modifier: Modifier = Modifier) {
+fun MirPayScreenPreview() {
     MirPayScreen(maxTicks = 15, card = Card.DEFAULT) {
 
     }
