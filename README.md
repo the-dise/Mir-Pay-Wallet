@@ -1,25 +1,41 @@
-# Mir Pay Companion for Wear OS
+# Mir Pay Wallet for Wear OS
 
 <img src="https://github.com/the-dise/Mir-Pay-Companion/blob/main/images/preview.png?raw=true" width="512" height="512">
 
 ## Description
 
-Mir Pay Companion is an Android application designed to enhance the Mir Pay experience on Wear OS devices. This companion app addresses a specific issue where the screen goes out during a payment transaction, preventing the payment from being completed. The Mir Pay Companion app ensures that the screen remains on until the end of the transaction timer, thereby facilitating successful payments when using Mir Pay on Wear OS watches.
+Mir Pay Wallet is an Android application designed to enhance the Mir Pay experience on Wear OS devices. This companion app addresses a specific issue where the screen goes out during a payment transaction, preventing the payment from being completed. Mir Pay Wallet app ensures that the screen remains on until the end of the timer, thereby facilitating successful payments when using Mir Pay on Wear OS watches.
 
 ## Features
 
-- The application is launched via **Complication**, a shortcut in the list of all applications opens the settings;
-- 13 different card designs to suit your taste;
-- Auto close application when timer expires.
+- Automatic closing of the app when the timer expires.
+- 24 different map designs to suit your taste;
+- The app includes **Complication**.
 
-## Cards Design 
+## Cards Design
 
 ![gallery](/images/cards-preview.png)
 
 ## Installation
 
-- Download the latest release of Mir Pay Companion APK from the [Releases](https://github.com/the-dise/Mir-Pay-Companion/releases) section.
-- Install the APK on your Wear OS device.
+- **Download**:
+  - Download the latest release of Mir Pay Companion APK from the [Releases](https://github.com/the-dise/Mir-Pay-Wallet/releases) section.
+- **Enable Developer Options**:
+   - On your Android device, go to Settings.
+   - Scroll down and find "About phone" or "About device".
+   - Look for "Build number" and tap it multiple times (usually 7 times) until you see a message indicating that Developer Options are enabled.
+- **Enable Wireless Debugging**:
+   - Still in Settings, go back to the main Settings screen.
+   - Find and tap on "Developer Options".
+   - Scroll down and find "Wireless debugging" or "ADB over network".
+   - Enable it. You may be prompted to confirm your device's security PIN or pattern.
+- **Connect via ADB**:
+   - On your computer, open a terminal or command prompt.
+   - Enter the following command: `adb connect <device_ip_address>` (replace `<device_ip_address>` with the IP address of your Android device).
+- **Install APK:**
+  - Use the command `adb install <path_to_apk>` in the terminal or command prompt  
+
+Ensure ADB is installed on your computer and your network allows communication between the devices.
 
 ## Usage
 
@@ -38,8 +54,12 @@ Mir Pay Companion is licensed under the [GPL-3.0 License](https://github.com/the
 ## Acknowledgments
 
 - Gorban - original idea;
-- [s44khin](https://github.com/s44khin/MirPayTimer)
+- [s44khin](https://github.com/s44khin) and his [MirPayTimer](https://github.com/s44khin/MirPayTimer)
+- [AndroidX Core-KTX](https://developer.android.com/kotlin/ktx)
+- [AndroidX Wear](https://developer.android.com/jetpack/androidx/releases/wear)
+- [AndroidX Wear Compose Foundation](https://developer.android.com/jetpack/androidx/releases/wear)
+- [Horologist by Google](https://github.com/google/horologist)
 
------
+---
 
-<p align="center">Made with ❤️ by Dise</p>
+<p align="center"><b>Made with ❤️ by Dise</b></p>
