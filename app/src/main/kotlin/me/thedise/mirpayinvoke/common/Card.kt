@@ -1,104 +1,117 @@
 package me.thedise.mirpayinvoke.common
 
+import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import me.thedise.mirpayinvoke.R
 
 enum class Card(
-    val colorId: Long,
-    @StringRes val titleId: Int,
-    @DrawableRes val imageId: Int,
-    @DrawableRes val backgroundId: Int,
+    @ColorInt val colorId: Long, @StringRes val titleId: Int, @DrawableRes val imageId: Int
 ) {
 
     DEFAULT(
-        titleId = R.string.card_secret_garden,
-        imageId = R.drawable.card_secret_garden,
-        backgroundId = R.drawable.background_card_secret_garden,
-        colorId = 0xFF0f9f5a
+        titleId = R.string.card_default_secret_garden,
+        imageId = R.drawable.card_default_secret_garden,
+        colorId = 0xFF0F9F5A
     ),
 
     SWISS_PLUM(
-        titleId = R.string.card_swiss_plum,
-        imageId = R.drawable.card_swiss_plum,
-        backgroundId = R.drawable.background_card_swiss_plum,
-        colorId = 0xFF594fb2
+        titleId = R.string.card_default_swiss_plum,
+        imageId = R.drawable.card_default_swiss_plum,
+        colorId = 0xFF594FB2
     ),
 
     LIGHT_CORAL(
-        titleId = R.string.card_light_coral,
-        imageId = R.drawable.card_light_coral,
-        backgroundId = R.drawable.background_card_light_coral,
-        colorId = 0xFFf08080
-    ),
-
-    POPPY_POMPADOUR(
-        titleId = R.string.card_poppy_pompadour,
-        imageId = R.drawable.card_poppy_pompadour,
-        backgroundId = R.drawable.background_card_poppy_pompadour,
-        colorId = 0xFF6b3fa0
+        titleId = R.string.card_default_light_coral,
+        imageId = R.drawable.card_default_light_coral,
+        colorId = 0xFFF08080
     ),
 
     SPICED_NECTARINE(
-        titleId = R.string.card_spiced_nectarine,
-        imageId = R.drawable.card_spiced_nectarine,
-        backgroundId = R.drawable.background_card_spiced_nectarine,
-        colorId = 0xFFffb872
+        titleId = R.string.card_default_spiced_nectarine,
+        imageId = R.drawable.card_default_spiced_nectarine,
+        colorId = 0xFFFFB872
     ),
 
     STARGATE_SHIMMER(
-        titleId = R.string.card_stargate_shimmer,
-        imageId = R.drawable.card_stargate_shimmer,
-        backgroundId = R.drawable.background_card_stargate_shimmer,
-        colorId = 0xFF6f7dff
+        titleId = R.string.card_default_stargate_shimmer,
+        imageId = R.drawable.card_default_stargate_shimmer,
+        colorId = 0xFF6F7DFF
     ),
 
     VEGA_VIOLET(
-        titleId = R.string.card_vega_violet,
-        imageId = R.drawable.card_vega_violet,
-        backgroundId = R.drawable.background_card_vega_violet,
-        colorId = 0xFFaa55ff
+        titleId = R.string.card_default_vega_violet,
+        imageId = R.drawable.card_default_vega_violet,
+        colorId = 0xFFAA55FF
     ),
 
     WONDER_LUST(
-        titleId = R.string.card_wonder_lust,
-        imageId = R.drawable.card_wonder_lust,
-        backgroundId = R.drawable.background_card_wonder_lust,
-        colorId = 0xFFef949d
+        titleId = R.string.card_default_wonder_lust,
+        imageId = R.drawable.card_default_wounder_list,
+        colorId = 0xFFEF949D
     ),
 
     ALPHA(
-        titleId = R.string.card_alpha_title,
-        imageId = R.drawable.card_alpha_image,
-        backgroundId = R.drawable.background_card_alpha_image,
-        colorId = 0xFFfd2d3b
+        titleId = R.string.card_real_alpha_title,
+        imageId = R.drawable.card_real_alpha,
+        colorId = 0xFFFD2D3B
     ),
 
     ROSBANK(
-        titleId = R.string.card_rosbank_title,
-        imageId = R.drawable.card_rosbank_image,
-        backgroundId = R.drawable.background_card_rosbank_image,
-        colorId = 0xFF9030a9
+        titleId = R.string.card_real_rosbank_title,
+        imageId = R.drawable.card_real_rosbank,
+        colorId = 0xFF9030A9
     ),
 
     SBERBANK(
-        titleId = R.string.card_sberbank_title,
-        imageId = R.drawable.card_sber_image,
-        backgroundId = R.drawable.background_card_sber_image,
-        colorId = 0xFF50bb5a
+        titleId = R.string.card_real_sberbank_title,
+        imageId = R.drawable.card_real_sber,
+        colorId = 0xFF50BB5A
     ),
 
-    TINKOFF(
-        titleId = R.string.card_tinkoff_title,
-        imageId = R.drawable.card_tinkoff_image,
-        backgroundId = R.drawable.background_card_tinkoff_image,
-        colorId = 0xFFffde34
+    TINKOFF_BLACK(
+        titleId = R.string.card_real_tinkoff_title,
+        imageId = R.drawable.card_real_tinkoff_black,
+        colorId = 0xFFFFDE34
+    ),
+    TINKOFF_DRIVE(
+        titleId = R.string.card_real_tinkoff_drive_title,
+        imageId = R.drawable.card_real_tinkoff_drive,
+        colorId = 0xFFFFDE34
+    ),
+    TINKOFF_PREMIUM(
+        titleId = R.string.card_real_tinkoff_premium_title,
+        imageId = R.drawable.card_real_tinkoff_premium,
+        colorId = 0xFFFFDE34
     ),
 
     PSB(
-        titleId = R.string.card_psb_title,
-        imageId = R.drawable.card_psb_image,
-        backgroundId = R.drawable.background_card_psb_image,
-        colorId = 0xFFea5616
+        titleId = R.string.card_real_psb_title,
+        imageId = R.drawable.card_real_psb,
+        colorId = 0xFFEA5616
+    ),
+
+    GAZPROMBANK(
+        titleId = R.string.card_real_gazprombank_title,
+        imageId = R.drawable.card_real_gazprombank,
+        colorId = 0xFFF58128
+    ),
+
+    RSHB(
+        titleId = R.string.card_real_rshb_title,
+        imageId = R.drawable.card_real_rshb,
+        colorId = 0xFFFFD108
+    ),
+
+    URALSIB(
+        titleId = R.string.card_real_uralsib_title,
+        imageId = R.drawable.card_real_uralsib,
+        colorId = 0xFF4B226B
+    ),
+
+    VTB(
+        titleId = R.string.card_real_vtb_title,
+        imageId = R.drawable.card_real_vtb,
+        colorId = 0xFF0058B9
     ),
 }

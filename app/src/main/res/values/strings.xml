@@ -11,20 +11,25 @@
     <string name="settings_choose_card">Choose card</string>
 
     <!-- Default abstract cards -->
-    <string name="card_secret_garden">Secret Garden</string>
-    <string name="card_swiss_plum">Swiss Plum</string>
-    <string name="card_light_coral">Light Coral</string>
-    <string name="card_poppy_pompadour">Poppy Pompadour</string>
-    <string name="card_spiced_nectarine">Spiced Nectarine</string>
-    <string name="card_stargate_shimmer">Stargate Shimmer</string>
-    <string name="card_vega_violet">Vega Violet</string>
-    <string name="card_wonder_lust">Wonder Lust</string>
+    <string name="card_default_secret_garden">Secret Garden</string>
+    <string name="card_default_swiss_plum">Swiss Plum</string>
+    <string name="card_default_light_coral">Light Coral</string>
+    <string name="card_default_spiced_nectarine">Spiced Nectarine</string>
+    <string name="card_default_stargate_shimmer">Stargate Shimmer</string>
+    <string name="card_default_vega_violet">Vega Violet</string>
+    <string name="card_default_wonder_lust">Wonder Lust</string>
 
     <!-- Real bank cards -->
-    <string name="card_alpha_title">Alpha</string>
-    <string name="card_rosbank_title">Rosbank</string>
-    <string name="card_sberbank_title">SberBank</string>
-    <string name="card_tinkoff_title">Tinkoff</string>
-    <string name="card_psb_title">PSB</string>
+    <string name="card_real_alpha_title">Alpha</string>
+    <string name="card_real_rosbank_title">Rosbank</string>
+    <string name="card_real_sberbank_title">SberBank</string>
+    <string name="card_real_tinkoff_title">Tinkoff</string>
+    <string name="card_real_psb_title">PSB</string>
+    <string name="card_real_gazprombank_title">Gazprombank</string>
+    <string name="card_real_rshb_title">RSHB</string>
+    <string name="card_real_tinkoff_drive_title">Tinkoff Drive</string>
+    <string name="card_real_tinkoff_premium_title">Tinkoff Premium</string>
+    <string name="card_real_uralsib_title">Uralsib</string>
+    <string name="card_real_vtb_title">VTB</string>
 
 </resources>
