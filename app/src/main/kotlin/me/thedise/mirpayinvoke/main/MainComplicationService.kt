@@ -15,7 +15,7 @@ import me.thedise.mirpayinvoke.R
 class MainComplicationService : SuspendingComplicationDataSourceService() {
 
     override fun getPreviewData(type: ComplicationType): ComplicationData? {
-        if (type != ComplicationType.SHORT_TEXT) {
+        if (type != ComplicationType.MONOCHROMATIC_IMAGE) {
             return null
         }
 
@@ -34,17 +34,16 @@ class MainComplicationService : SuspendingComplicationDataSourceService() {
     }
 
     private fun monochromaticImageData(tapAction: PendingIntent? = null): MonochromaticImageComplicationData {
-        val monochromaticImageBuilder = MonochromaticImage.Builder(image = Icon.createWithResource(
-            applicationContext,
-            R.drawable.ic_wallet_24
-        ))
-        val contentDescription = PlainComplicationText.Builder(getText(R.string.complication_provider_label)).build()
+        val monochromaticImageBuilder = MonochromaticImage.Builder(
+            image = Icon.createWithResource(
+                applicationContext, R.drawable.ic_wallet_24
+            )
+        )
+        val contentDescription =
+            PlainComplicationText.Builder(getText(R.string.complication_provider_label)).build()
 
         return MonochromaticImageComplicationData.Builder(
-            monochromaticImageBuilder.build(),
-            contentDescription
-        )
-            .setTapAction(tapAction)
-            .build()
+            monochromaticImageBuilder.build(), contentDescription
+        ).setTapAction(tapAction).build()
     }
 }
