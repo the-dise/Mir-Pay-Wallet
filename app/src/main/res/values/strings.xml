@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Mir Pay Wallet</string>
 
+    <string name="app_title_mir">Mir</string>
+    <string name="app_title_pay">Pay</string>
+
     <string name="complication_provider_label">Quick start</string>
 
     <!-- Settings -->
     <string name="settings_title">Settings</string>
-    <string name="settings_timer_title">Select timer</string>
+    <string name="settings_timer_title">Countdown time</string>
     <string name="settings_card_title">Card</string>
     <string name="settings_enter_ms">Enter ms</string>
     <string name="settings_choose_card">Choose card</string>

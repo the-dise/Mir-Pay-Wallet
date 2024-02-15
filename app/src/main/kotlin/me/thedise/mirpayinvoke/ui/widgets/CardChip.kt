@@ -45,7 +45,7 @@ fun ScalingLazyListScope.cardChip(
         onClick = { launcher.launch(createIntent(label)) },
         label = {
             Text(
-                text = label, maxLines = 1
+                text = stringResource(id = R.string.settings_card_title), maxLines = 1
             )
         },
         secondaryLabel = {

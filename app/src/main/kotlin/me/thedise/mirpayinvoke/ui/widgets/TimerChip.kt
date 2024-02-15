@@ -49,7 +49,7 @@ fun ScalingLazyListScope.timerChip(
         onClick = { launcher.launch(createIntent(label)) },
         label = {
             Text(
-                text = label, maxLines = 1
+                text = stringResource(id = R.string.settings_timer_title), maxLines = 1
             )
         },
 
