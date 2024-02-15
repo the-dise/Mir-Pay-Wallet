@@ -1,5 +1,6 @@
 package me.thedise.mirpayinvoke.ui
 
+import android.content.Context
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -23,7 +24,7 @@ import me.thedise.mirpayinvoke.common.AppStorage
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun WearApp(
-    appStorage: AppStorage, onTimerEnd: () -> Unit
+    appStorage: AppStorage, context: Context, onTimerEnd: () -> Unit
 ) {
     val navController = rememberSwipeDismissableNavController()
     val swipeToDismissBoxState = rememberSwipeToDismissBoxState()
@@ -53,6 +54,7 @@ fun WearApp(
                     ) {
                         when (page) {
                             0 -> MirPayScreen(
+                                context = context,
                                 maxTicks = appStorage.timerTicks,
                                 card = appStorage.card,
                                 onTimerEnd = onTimerEnd

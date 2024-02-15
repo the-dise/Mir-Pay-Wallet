@@ -9,6 +9,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import me.thedise.mirpayinvoke.common.AppStorage
 import me.thedise.mirpayinvoke.common.PREFS_NAME
 import me.thedise.mirpayinvoke.ui.WearApp
+import me.thedise.mirpayinvoke.ui.theme.MirPayTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -23,7 +24,10 @@ class MainActivity : ComponentActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         setContent {
-            WearApp(appStorage = appStorage, onTimerEnd = { finish() })
+            MirPayTheme() {
+                WearApp(appStorage = appStorage, context = this@MainActivity, onTimerEnd = {
+                    finish() })
+            }
         }
     }
 

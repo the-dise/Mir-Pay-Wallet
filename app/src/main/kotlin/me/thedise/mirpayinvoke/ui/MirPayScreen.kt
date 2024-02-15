@@ -1,5 +1,8 @@
 package me.thedise.mirpayinvoke.ui
 
+import android.content.Context
+import android.os.VibrationEffect
+import android.os.Vibrator
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -21,7 +24,6 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -30,14 +32,17 @@ import me.thedise.mirpayinvoke.common.Card
 import me.thedise.mirpayinvoke.ui.widgets.AnimatedCounter
 import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 
+@Suppress("DEPRECATION")
 @Composable
 fun MirPayScreen(
+    context: Context,
     maxTicks: Int,
     card: Card,
     onTimerEnd: () -> Unit,
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
     var timerJob by remember { mutableStateOf<Job?>(null) }
+    val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
     Box(
         modifier = Modifier
@@ -88,6 +93,12 @@ fun MirPayScreen(
                 currentTicks++
 
                 if (currentTicks == maxTicks) {
+                    vibrator.vibrate(
+                        VibrationEffect.createOneShot(
+                            400, VibrationEffect
+                                .DEFAULT_AMPLITUDE
+                        )
+                    )
                     onTimerEnd()
                 }
             }
