@@ -12,6 +12,7 @@ import me.thedise.mirpayinvoke.R
 import me.thedise.mirpayinvoke.common.Card
 import me.thedise.mirpayinvoke.ui.theme.MirPayTheme
 import me.thedise.mirpayinvoke.ui.widgets.cardChip
+import me.thedise.mirpayinvoke.ui.widgets.hapticChip
 import me.thedise.mirpayinvoke.ui.widgets.timerChip
 
 @Composable
@@ -31,6 +32,8 @@ fun SettingsScreen(
                         )
                     }
                 }
+
+                hapticChip()
 
                 timerChip(
                     currentTicks = timerTicks,
