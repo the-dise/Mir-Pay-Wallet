@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Mir Pay Кошелёк</string>
+
+    <string name="app_title_mir">Мир</string>
+    <string name="app_title_pay">Пей</string>
+
+    <string name="complication_provider_label">Быстрый запуск</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_timer_title">Отсчёт времени</string>
+    <string name="settings_card_title">Карта</string>
+    <string name="settings_enter_ms">Выберите время</string>
+    <string name="settings_choose_card">Выберите карту</string>
+
+    <!-- Default abstract cards -->
+    <string name="card_default_secret_garden">Лужайка</string>
+    <string name="card_default_swiss_plum">Слива</string>
+    <string name="card_default_light_coral">Коралл</string>
+    <string name="card_default_spiced_nectarine">Нектарин</string>
+    <string name="card_default_stargate_shimmer">Мерцание</string>
+    <string name="card_default_vega_violet">Фиалка</string>
+    <string name="card_default_wonder_lust">Вожделение</string>
+
+    <!-- Real bank cards -->
+    <string name="card_real_alpha_title">Альфа Банк</string>
+    <string name="card_real_rosbank_title">Росбанк</string>
+    <string name="card_real_sberbank_title">СберБанк</string>
+    <string name="card_real_tinkoff_title">Тинькофф</string>
+    <string name="card_real_psb_title">ПСБ</string>
+    <string name="card_real_gazprombank_title">Газпромбанк</string>
+    <string name="card_real_rshb_title">Россельхозбанк</string>
+    <string name="card_real_tinkoff_drive_title">Тинькофф Drive</string>
+    <string name="card_real_tinkoff_premium_title">Тинькофф Premium</string>
+    <string name="card_real_uralsib_title">Уралсиб</string>
+    <string name="card_real_vtb_title">ВТБ</string>
+
+</resources>
