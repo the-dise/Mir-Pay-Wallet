@@ -10,6 +10,7 @@ import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import me.thedise.mirpayinvoke.R
 import me.thedise.mirpayinvoke.common.Card
+import me.thedise.mirpayinvoke.ui.theme.MirPayTheme
 import me.thedise.mirpayinvoke.ui.widgets.cardChip
 import me.thedise.mirpayinvoke.ui.widgets.timerChip
 
@@ -17,26 +18,29 @@ import me.thedise.mirpayinvoke.ui.widgets.timerChip
 fun SettingsScreen(
     timerTicks: Int, card: Card, onChangeTimer: (Int) -> Unit, onChangeCard: (Card) -> Unit
 ) {
-    Scaffold(vignette = {
-        Vignette(vignettePosition = VignettePosition.TopAndBottom)
-    }) {
-        ScalingLazyColumn {
-            item {
-                ListHeader {
-                    Text(
-                        text = stringResource(R.string.settings_title)
-                    )
+    MirPayTheme {
+
+        Scaffold(vignette = {
+            Vignette(vignettePosition = VignettePosition.TopAndBottom)
+        }) {
+            ScalingLazyColumn {
+                item {
+                    ListHeader {
+                        Text(
+                            text = stringResource(R.string.settings_title)
+                        )
+                    }
                 }
+
+                timerChip(
+                    currentTicks = timerTicks,
+                    onChangeTimer = onChangeTimer,
+                )
+
+                cardChip(
+                    currentCard = card, onChangeCard = onChangeCard
+                )
             }
-
-            timerChip(
-                currentTicks = timerTicks,
-                onChangeTimer = onChangeTimer,
-            )
-
-            cardChip(
-                currentCard = card, onChangeCard = onChangeCard
-            )
         }
     }
 }
