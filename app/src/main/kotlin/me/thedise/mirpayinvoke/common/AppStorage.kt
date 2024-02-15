@@ -14,7 +14,10 @@ class AppStorage(private val sharedPreferences: SharedPreferences) {
         set(value) = sharedPreferences.edit().putInt(TIMER_KEY, value).apply()
 
     var card: Card
-        get() = Card.valueOf(sharedPreferences.getString(CARD_KEY, Card.DEFAULT.name) ?: Card.DEFAULT
-            .name)
+        get() = try {
+            Card.valueOf(sharedPreferences.getString(CARD_KEY, Card.DEFAULT.name) ?: Card.DEFAULT.name)
+        } catch (e: IllegalArgumentException) {
+            Card.DEFAULT
+        }
         set(value) = sharedPreferences.edit().putString(CARD_KEY, value.name).apply()
 }
