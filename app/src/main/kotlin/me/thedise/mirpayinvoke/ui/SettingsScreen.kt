@@ -17,7 +17,12 @@ import me.thedise.mirpayinvoke.ui.widgets.timerChip
 
 @Composable
 fun SettingsScreen(
-    timerTicks: Int, card: Card, onChangeTimer: (Int) -> Unit, onChangeCard: (Card) -> Unit
+    timerTicks: Int,
+    card: Card,
+    onChangeTimer: (Int) -> Unit,
+    onChangeCard: (Card) -> Unit,
+    onToggleHaptic: Boolean,
+    onToggleHapticAction: (Boolean) -> Unit
 ) {
     MirPayTheme {
 
@@ -33,7 +38,10 @@ fun SettingsScreen(
                     }
                 }
 
-                hapticChip()
+            hapticChip(
+                onToggleHaptic = onToggleHaptic,
+                onToggleHapticAction = onToggleHapticAction,
+            )
 
                 timerChip(
                     currentTicks = timerTicks,

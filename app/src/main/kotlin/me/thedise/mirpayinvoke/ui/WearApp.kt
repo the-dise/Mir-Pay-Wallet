@@ -57,14 +57,17 @@ fun WearApp(
                                 context = context,
                                 maxTicks = appStorage.timerTicks,
                                 card = appStorage.card,
-                                onTimerEnd = onTimerEnd
+                                onTimerEnd = onTimerEnd,
+                                onToggleHaptic = appStorage.haptic // Pass haptic feedback setting
                             )
 
                             1 -> SettingsScreen(card = appStorage.card,
                                 timerTicks = appStorage.timerTicks,
                                 onChangeTimer = { appStorage.timerTicks = it },
-                                onChangeCard = { appStorage.card = it })
-
+                                onChangeCard = { appStorage.card = it },
+                                onToggleHaptic = appStorage.haptic,
+                                onToggleHapticAction = { appStorage.haptic = it }
+                            )
 
                             else -> throw IllegalArgumentException("Unknown page")
                         }

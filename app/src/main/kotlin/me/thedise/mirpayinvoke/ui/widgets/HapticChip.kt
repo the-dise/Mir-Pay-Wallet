@@ -1,5 +1,6 @@
 package me.thedise.mirpayinvoke.ui.widgets
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.getValue
@@ -16,29 +17,30 @@ import androidx.wear.compose.material.Icon
 import androidx.wear.compose.material.Switch
 import androidx.wear.compose.material.Text
 import androidx.wear.compose.material.ToggleChip
-import androidx.wear.compose.material.ToggleChipDefaults
 import me.thedise.mirpayinvoke.R
 
 fun ScalingLazyListScope.hapticChip(
+    onToggleHaptic: Boolean,
+    onToggleHapticAction: (Boolean) -> Unit
+
 ) = item {
-    var checked by remember { mutableStateOf(true) }
+    var checked by remember { mutableStateOf(onToggleHaptic) }
 
     ToggleChip(
+        modifier = Modifier.fillMaxWidth(),
         label = {
-            Text("Haptic feedback", overflow = TextOverflow.Ellipsis)
+            Text("Haptic", overflow = TextOverflow.Ellipsis)
         },
         checked = checked,
-
-        colors = ToggleChipDefaults.toggleChipColors(
-            uncheckedToggleControlColor = ToggleChipDefaults.SwitchUncheckedIconColor
-        ),
         toggleControl = {
             Switch(
-                checked = checked,
-                enabled = true,
+                checked = checked
             )
         },
-        onCheckedChange = { checked = it },
+        onCheckedChange = { newChecked ->
+            checked = newChecked
+            onToggleHapticAction(newChecked)
+        },
         appIcon = {
             Icon(
                 painter = painterResource(id = R.drawable.ic_vibration_24),

@@ -7,6 +7,7 @@ class AppStorage(private val sharedPreferences: SharedPreferences) {
     companion object {
         private const val TIMER_KEY = "timer"
         private const val CARD_KEY = "card"
+        private const val HAPTIC_KEY = "haptic"
     }
 
     var timerTicks: Int
@@ -20,4 +21,8 @@ class AppStorage(private val sharedPreferences: SharedPreferences) {
             Card.DEFAULT
         }
         set(value) = sharedPreferences.edit().putString(CARD_KEY, value.name).apply()
+
+    var haptic: Boolean // Getter and setter for haptic feedback setting
+        get() = sharedPreferences.getBoolean(HAPTIC_KEY, DEFAULT_HAPTIC) // Default is true
+        set(value) = sharedPreferences.edit().putBoolean(HAPTIC_KEY, value).apply()
 }

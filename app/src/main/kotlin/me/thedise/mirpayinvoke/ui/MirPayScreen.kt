@@ -35,10 +35,7 @@ import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 @Suppress("DEPRECATION")
 @Composable
 fun MirPayScreen(
-    context: Context,
-    maxTicks: Int,
-    card: Card,
-    onTimerEnd: () -> Unit,
+    context: Context, maxTicks: Int, card: Card, onTimerEnd: () -> Unit, onToggleHaptic: Boolean
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
     var timerJob by remember { mutableStateOf<Job?>(null) }
@@ -87,6 +84,16 @@ fun MirPayScreen(
     }
 
     LaunchedEffect(Unit) {
+        Log.d("MirPayWear", "Haptic feedback is $onToggleHaptic")
+
+        if (onToggleHaptic) { // Check if haptic feedback is enabled
+            vibrator.vibrate(
+                VibrationEffect.createOneShot(
+                    300, VibrationEffect.DEFAULT_AMPLITUDE
+                )
+            )
+        }
+
         timerJob = launch {
             while (currentTicks != maxTicks) {
                 delay(1000)
