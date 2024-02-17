@@ -10,6 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.wear.compose.foundation.lazy.ScalingLazyListScope
 import androidx.wear.compose.material.ChipDefaults
@@ -21,8 +22,7 @@ import androidx.wear.compose.material.ToggleChip
 import me.thedise.mirpayinvoke.R
 
 fun ScalingLazyListScope.hapticChip(
-    onToggleHaptic: Boolean,
-    onToggleHapticAction: (Boolean) -> Unit
+    onToggleHaptic: Boolean, onToggleHapticAction: (Boolean) -> Unit
 
 ) = item {
     var checked by remember { mutableStateOf(onToggleHaptic) }
@@ -30,7 +30,10 @@ fun ScalingLazyListScope.hapticChip(
     ToggleChip(
         modifier = Modifier.fillMaxWidth(),
         label = {
-            Text("Haptic", overflow = TextOverflow.Ellipsis)
+            Text(
+                stringResource(id = R.string.settings_haptic_feedback),
+                overflow = TextOverflow.Ellipsis
+            )
         },
         checked = checked,
         toggleControl = {

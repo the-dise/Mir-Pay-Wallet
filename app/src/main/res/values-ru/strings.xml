@@ -12,6 +12,7 @@
     <string name="settings_card_title">Карта</string>
     <string name="settings_enter_ms">Выберите время</string>
     <string name="settings_choose_card">Выберите карту</string>
+    <string name="settings_haptic_feedback">Виброотдача</string>
 
     <!-- Default abstract cards -->
     <string name="card_default_secret_garden">Лужайка</string>

@@ -12,6 +12,7 @@
     <string name="settings_card_title">Card</string>
     <string name="settings_enter_ms">Enter ms</string>
     <string name="settings_choose_card">Choose card</string>
+    <string name="settings_haptic_feedback">Haptic feedback</string>
 
     <!-- Default abstract cards -->
     <string name="card_default_secret_garden">Secret Garden</string>
