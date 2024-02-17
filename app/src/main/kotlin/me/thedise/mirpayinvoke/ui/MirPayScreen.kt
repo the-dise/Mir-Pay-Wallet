@@ -95,7 +95,7 @@ fun MirPayScreen(
         }
 
         timerJob = launch {
-            while (currentTicks != maxTicks) {
+            repeat(maxTicks) {
                 delay(1000)
                 currentTicks++
 
