@@ -34,7 +34,7 @@ fun LogoBlock(
     Text(
         text = stringResource(id = R.string.app_title_mir),
         style = style,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
     )
 
     Spacer(modifier = Modifier.width(1.dp))
