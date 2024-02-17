@@ -18,6 +18,7 @@ import androidx.wear.compose.foundation.lazy.ScalingLazyListScope
 import androidx.wear.compose.material.Chip
 import androidx.wear.compose.material.ChipDefaults
 import androidx.wear.compose.material.Icon
+import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import androidx.wear.input.RemoteInputIntentHelper
 import me.thedise.mirpayinvoke.R
@@ -63,7 +64,8 @@ fun ScalingLazyListScope.timerChip(
                 contentDescription = null,
                 modifier = Modifier
                     .size(ChipDefaults.SmallIconSize)
-                    .wrapContentSize(align = Alignment.Center)
+                    .wrapContentSize(align = Alignment.Center),
+                tint = MaterialTheme.colors.primary
             )
         })
 }
