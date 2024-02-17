@@ -3,7 +3,6 @@ package me.thedise.mirpayinvoke.ui
 import android.content.Context
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -87,14 +86,9 @@ fun MirPayScreen(
     }
 
     LaunchedEffect(Unit) {
-        Log.d("MirPayWear", "Haptic feedback is $onToggleHaptic")
-
-        if (onToggleHaptic) { // Check if haptic feedback is enabled
-            vibrator.vibrate(
-                VibrationEffect.createOneShot(
-                    300, VibrationEffect.DEFAULT_AMPLITUDE
-                )
-            )
+        if (onToggleHaptic) {
+            // Vibrate at the start
+            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
         }
 
         timerJob = launch {
@@ -103,6 +97,10 @@ fun MirPayScreen(
                 currentTicks++
 
                 if (currentTicks == maxTicks) {
+
+                    if (onToggleHaptic) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+                    }
                     onTimerEnd()
                 }
             }
