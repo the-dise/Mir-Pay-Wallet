@@ -86,24 +86,22 @@ fun MirPayScreen(
     }
 
     LaunchedEffect(Unit) {
+        val vibrationEffect = VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE)
+
         if (onToggleHaptic) {
-            // Vibrate at the start
-            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+            vibrator.vibrate(vibrationEffect)
         }
 
         timerJob = launch {
             repeat(maxTicks) {
                 delay(1000)
                 currentTicks++
-
-                if (currentTicks == maxTicks) {
-
-                    if (onToggleHaptic) {
-                        vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
-                    }
-                    onTimerEnd()
-                }
             }
+
+            if (onToggleHaptic) {
+                vibrator.vibrate(vibrationEffect)
+            }
+            onTimerEnd()
         }
     }
 
