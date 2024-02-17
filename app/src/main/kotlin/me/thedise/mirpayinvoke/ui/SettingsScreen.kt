@@ -38,10 +38,10 @@ fun SettingsScreen(
                     }
                 }
 
-            hapticChip(
-                onToggleHaptic = onToggleHaptic,
-                onToggleHapticAction = onToggleHapticAction,
-            )
+                hapticChip(
+                    onToggleHaptic = onToggleHaptic,
+                    onToggleHapticAction = onToggleHapticAction,
+                )
 
                 timerChip(
                     currentTicks = timerTicks,

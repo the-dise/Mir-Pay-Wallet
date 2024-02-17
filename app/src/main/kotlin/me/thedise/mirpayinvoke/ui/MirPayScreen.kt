@@ -3,6 +3,7 @@ package me.thedise.mirpayinvoke.ui
 import android.content.Context
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -23,7 +24,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -44,9 +47,7 @@ fun MirPayScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(
-                horizontal = 16.dp, vertical = 16.dp
-            )
+            .padding(16.dp)
             .background(
                 brush = Brush.radialGradient(
                     colors = listOf(
@@ -71,7 +72,9 @@ fun MirPayScreen(
                     clip = true,
                     shape = RoundedCornerShape(8.dp),
                     spotColor = Color.Black
-                ), painter = painterResource(card.imageId), contentDescription = null
+                ),
+            painter = painterResource(card.imageId),
+            contentDescription = null
         )
 
         Row(
@@ -100,12 +103,6 @@ fun MirPayScreen(
                 currentTicks++
 
                 if (currentTicks == maxTicks) {
-                    vibrator.vibrate(
-                        VibrationEffect.createOneShot(
-                            400, VibrationEffect
-                                .DEFAULT_AMPLITUDE
-                        )
-                    )
                     onTimerEnd()
                 }
             }
@@ -127,8 +124,13 @@ fun MirPayScreen(
 )
 @Composable
 fun MirPayScreenPreview() {
-    MirPayScreen(maxTicks = 15, card = Card.DEFAULT) {
-
-    }
+    val context = LocalContext.current // Get the current context
+    MirPayScreen(
+        context = context,
+        maxTicks = 15,
+        card = Card.DEFAULT,
+        onTimerEnd = { },
+        onToggleHaptic = true
+    )
 }
 
