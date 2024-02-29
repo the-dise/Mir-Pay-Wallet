@@ -42,7 +42,8 @@ fun MirPayScreen(
     card: Card,
     vibrationIntensity: Int,
     onTimerEnd: () -> Unit,
-    onToggleHaptic: Boolean
+    onToggleHaptic: Boolean,
+    onToggleVibrateEverySecond: Boolean
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
     var timerJob by remember { mutableStateOf<Job?>(null) }
@@ -93,16 +94,23 @@ fun MirPayScreen(
     LaunchedEffect(Unit) {
         val vibrationEffect = VibrationEffect.createOneShot(vibrationIntensity.toLong(), VibrationEffect.DEFAULT_AMPLITUDE)
 
+        if (onToggleHaptic and !onToggleVibrateEverySecond) {
+            vibrator.vibrate(vibrationEffect)
+        }
+
         timerJob = launch {
             repeat(maxTicks) {
                 delay(1000)
                 currentTicks++
 
-                if (onToggleHaptic) {
+                if (onToggleHaptic and onToggleVibrateEverySecond) {
                     vibrator.vibrate(vibrationEffect)
                 }
             }
 
+            if (onToggleHaptic and !onToggleVibrateEverySecond) {
+                vibrator.vibrate(vibrationEffect)
+            }
             onTimerEnd()
         }
     }
@@ -129,6 +137,7 @@ fun MirPayScreenPreview() {
         card = Card.DEFAULT,
         vibrationIntensity = 100,
         onTimerEnd = { },
-        onToggleHaptic = true
+        onToggleHaptic = true,
+        onToggleVibrateEverySecond = true
     )
 }

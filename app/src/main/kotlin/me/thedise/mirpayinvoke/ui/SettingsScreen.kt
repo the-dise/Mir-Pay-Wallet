@@ -68,6 +68,11 @@ fun SettingsScreen(
                     onToggleHapticAction = onToggleHapticAction,
                 )
 
+                vibrateEverySecondChip(
+                    onToggleVibrateEverySecond = onToggleVibrateEverySecond,
+                    onToggleVibrateEverySecondAction = onToggleVibrateEverySecondAction,
+                )
+
                 vibrationIntensityChip(
                     currentMs = vibrationIntensity,
                     onChangeVibrationIntensity = onChangeVibrationIntensity,

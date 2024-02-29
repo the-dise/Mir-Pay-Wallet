@@ -8,6 +8,7 @@ class AppStorage(private val sharedPreferences: SharedPreferences) {
         private const val TIMER_KEY = "timer"
         private const val CARD_KEY = "card"
         private const val HAPTIC_KEY = "haptic"
+        private const val VIBRATE_EVERY_SECOND_KEY = "vibrate_every_second"
         private const val VIBRATION_INTENSITY_KEY = "vibration_intensity"
     }
 
@@ -26,6 +27,10 @@ class AppStorage(private val sharedPreferences: SharedPreferences) {
     var haptic: Boolean // Getter and setter for haptic feedback setting
         get() = sharedPreferences.getBoolean(HAPTIC_KEY, DEFAULT_HAPTIC) // Default is true
         set(value) = sharedPreferences.edit().putBoolean(HAPTIC_KEY, value).apply()
+
+    var vibrateEverySecond: Boolean // Getter and setter for vibrate every second setting
+        get() = sharedPreferences.getBoolean(VIBRATE_EVERY_SECOND_KEY, DEFAULT_VIBRATE_EVERY_SECOND) // Default is true
+        set(value) = sharedPreferences.edit().putBoolean(VIBRATE_EVERY_SECOND_KEY, value).apply()
 
     var vibrationIntensity: Int
         get() = sharedPreferences.getInt(VIBRATION_INTENSITY_KEY, DEFAULT_VIBRATION_INTENSITY)

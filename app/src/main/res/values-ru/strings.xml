@@ -14,6 +14,8 @@
     <string name="settings_haptic_feedback">Виброотдача</string>
     <string name="settings_timer_title">Отсчёт времени</string>
     <string name="settings_title">Настройки</string>
+    <string name="settings_vibrate_every_second">Вибрировать каждую секунду</string>
+    <string name="settings_vibration_intensity_title">Интенсивность вибрации</string>
 
     <!-- Default abstract cards -->
     <string name="card_default_secret_garden">Лужайка</string>
