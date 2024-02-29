@@ -37,7 +37,13 @@ import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 @Suppress("DEPRECATION")
 @Composable
 fun MirPayScreen(
-    context: Context, maxTicks: Int, card: Card, onTimerEnd: () -> Unit, onToggleHaptic: Boolean
+    context: Context,
+    maxTicks: Int,
+    card: Card,
+    vibrationIntensity: Int,
+    onTimerEnd: () -> Unit,
+    onToggleHaptic: Boolean,
+    onToggleVibrateEverySecond: Boolean
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
     var timerJob by remember { mutableStateOf<Job?>(null) }
@@ -86,9 +92,9 @@ fun MirPayScreen(
     }
 
     LaunchedEffect(Unit) {
-        val vibrationEffect = VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE)
+        val vibrationEffect = VibrationEffect.createOneShot(vibrationIntensity.toLong(), VibrationEffect.DEFAULT_AMPLITUDE)
 
-        if (onToggleHaptic) {
+        if (onToggleHaptic and !onToggleVibrateEverySecond) {
             vibrator.vibrate(vibrationEffect)
         }
 
@@ -96,9 +102,13 @@ fun MirPayScreen(
             repeat(maxTicks) {
                 delay(1000)
                 currentTicks++
+
+                if (onToggleHaptic and onToggleVibrateEverySecond) {
+                    vibrator.vibrate(vibrationEffect)
+                }
             }
 
-            if (onToggleHaptic) {
+            if (onToggleHaptic and !onToggleVibrateEverySecond) {
                 vibrator.vibrate(vibrationEffect)
             }
             onTimerEnd()
@@ -125,8 +135,9 @@ fun MirPayScreenPreview() {
         context = context,
         maxTicks = 15,
         card = Card.DEFAULT,
+        vibrationIntensity = 100,
         onTimerEnd = { },
-        onToggleHaptic = true
+        onToggleHaptic = true,
+        onToggleVibrateEverySecond = true
     )
 }
-

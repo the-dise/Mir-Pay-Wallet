@@ -57,16 +57,22 @@ fun WearApp(
                                 context = context,
                                 maxTicks = appStorage.timerTicks,
                                 card = appStorage.card,
+                                vibrationIntensity = appStorage.vibrationIntensity,
                                 onTimerEnd = onTimerEnd,
-                                onToggleHaptic = appStorage.haptic // Pass haptic feedback setting
+                                onToggleHaptic = appStorage.haptic, // Pass haptic feedback setting
+                                onToggleVibrateEverySecond = appStorage.vibrateEverySecond
                             )
 
                             1 -> SettingsScreen(card = appStorage.card,
                                 timerTicks = appStorage.timerTicks,
+                                vibrationIntensity = appStorage.vibrationIntensity,
                                 onChangeTimer = { appStorage.timerTicks = it },
                                 onChangeCard = { appStorage.card = it },
+                                onChangeVibrationIntensity = { appStorage.vibrationIntensity = it },
                                 onToggleHaptic = appStorage.haptic,
-                                onToggleHapticAction = { appStorage.haptic = it }
+                                onToggleHapticAction = { appStorage.haptic = it },
+                                onToggleVibrateEverySecond = appStorage.vibrateEverySecond,
+                                onToggleVibrateEverySecondAction = { appStorage.vibrateEverySecond = it }
                             )
 
                             else -> throw IllegalArgumentException("Unknown page")
@@ -77,4 +83,3 @@ fun WearApp(
         }
     }
 }
-

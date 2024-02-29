@@ -7,12 +7,15 @@
     <string name="complication_provider_label">Quick start</string>
 
     <!-- Settings -->
-    <string name="settings_title">Settings</string>
-    <string name="settings_timer_title">Countdown time</string>
     <string name="settings_card_title">Card</string>
-    <string name="settings_enter_ms">Enter ms</string>
     <string name="settings_choose_card">Choose card</string>
+    <string name="settings_enter_ms">Enter ms</string>
+    <string name="settings_enter_vibration_intensity">Enter intensity (ms)</string>
     <string name="settings_haptic_feedback">Haptic feedback</string>
+    <string name="settings_timer_title">Countdown time</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_vibrate_every_second">Vibrate every second</string>
+    <string name="settings_vibration_intensity_title">Vibration intensity</string>
 
     <!-- Default abstract cards -->
     <string name="card_default_secret_garden">Secret Garden</string>
