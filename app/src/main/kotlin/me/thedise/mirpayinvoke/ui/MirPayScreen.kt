@@ -37,7 +37,12 @@ import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 @Suppress("DEPRECATION")
 @Composable
 fun MirPayScreen(
-    context: Context, maxTicks: Int, card: Card, onTimerEnd: () -> Unit, onToggleHaptic: Boolean
+    context: Context,
+    maxTicks: Int,
+    card: Card,
+    vibrationIntensity: Int,
+    onTimerEnd: () -> Unit,
+    onToggleHaptic: Boolean
 ) {
     var currentTicks by remember { mutableIntStateOf(0) }
     var timerJob by remember { mutableStateOf<Job?>(null) }
@@ -86,7 +91,7 @@ fun MirPayScreen(
     }
 
     LaunchedEffect(Unit) {
-        val vibrationEffect = VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE)
+        val vibrationEffect = VibrationEffect.createOneShot(vibrationIntensity.toLong(), VibrationEffect.DEFAULT_AMPLITUDE)
 
         timerJob = launch {
             repeat(maxTicks) {
@@ -122,8 +127,8 @@ fun MirPayScreenPreview() {
         context = context,
         maxTicks = 15,
         card = Card.DEFAULT,
+        vibrationIntensity = 100,
         onTimerEnd = { },
         onToggleHaptic = true
     )
 }
-

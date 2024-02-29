@@ -22,16 +22,22 @@ import me.thedise.mirpayinvoke.ui.theme.MirPayTheme
 import me.thedise.mirpayinvoke.ui.widgets.cardChip
 import me.thedise.mirpayinvoke.ui.widgets.hapticChip
 import me.thedise.mirpayinvoke.ui.widgets.timerChip
+import me.thedise.mirpayinvoke.ui.widgets.vibrationIntensityChip
+import me.thedise.mirpayinvoke.ui.widgets.vibrateEverySecondChip
 
 @OptIn(ExperimentalHorologistApi::class)
 @Composable
 fun SettingsScreen(
     timerTicks: Int,
     card: Card,
+    vibrationIntensity: Int,
     onChangeTimer: (Int) -> Unit,
     onChangeCard: (Card) -> Unit,
+    onChangeVibrationIntensity: (Int) -> Unit,
     onToggleHaptic: Boolean,
-    onToggleHapticAction: (Boolean) -> Unit
+    onToggleHapticAction: (Boolean) -> Unit,
+    onToggleVibrateEverySecond: Boolean,
+    onToggleVibrateEverySecondAction: (Boolean) -> Unit
 ) {
     MirPayTheme {
         val state = rememberScalingLazyListState()
@@ -60,6 +66,11 @@ fun SettingsScreen(
                 hapticChip(
                     onToggleHaptic = onToggleHaptic,
                     onToggleHapticAction = onToggleHapticAction,
+                )
+
+                vibrationIntensityChip(
+                    currentMs = vibrationIntensity,
+                    onChangeVibrationIntensity = onChangeVibrationIntensity,
                 )
 
                 timerChip(
