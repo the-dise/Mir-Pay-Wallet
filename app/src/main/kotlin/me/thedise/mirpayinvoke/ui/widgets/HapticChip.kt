@@ -31,8 +31,13 @@ fun ScalingLazyListScope.hapticChip(
         modifier = Modifier.fillMaxWidth(),
         label = {
             Text(
-                stringResource(id = R.string.settings_haptic_feedback),
+                stringResource(id = R.string.settings_haptic_feedback_label),
                 overflow = TextOverflow.Ellipsis
+            )
+        },
+        secondaryLabel = {
+            Text(
+                text = stringResource(R.string.settings_haptic_feedback_secondary), maxLines = 1
             )
         },
         checked = checked,

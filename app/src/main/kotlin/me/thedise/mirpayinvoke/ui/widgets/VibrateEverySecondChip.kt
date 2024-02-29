@@ -31,8 +31,13 @@ fun ScalingLazyListScope.vibrateEverySecondChip(
         modifier = Modifier.fillMaxWidth(),
         label = {
             Text(
-                stringResource(id = R.string.settings_vibrate_every_second),
+                stringResource(id = R.string.settings_vibrate_every_second_label),
                 overflow = TextOverflow.Ellipsis
+            )
+        },
+        secondaryLabel = {
+            Text(
+                text = stringResource(R.string.settings_vibrate_every_second_secondary), maxLines = 1
             )
         },
         checked = checked,
@@ -47,7 +52,7 @@ fun ScalingLazyListScope.vibrateEverySecondChip(
         },
         appIcon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_vibration_24),
+                painter = painterResource(id = R.drawable.ic_every_seconds_24),
                 contentDescription = null,
                 modifier = Modifier
                     .size(ChipDefaults.SmallIconSize)

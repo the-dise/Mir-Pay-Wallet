@@ -25,9 +25,18 @@ import me.thedise.mirpayinvoke.R
 import me.thedise.mirpayinvoke.common.DEFAULT_VIBRATION_INTENSITY
 
 private const val VIBRATION_INTENSITY_KEY = "vibration_intensity"
-private val DEFAULT_VALUES = arrayOf(
-    "10", "25", "50", "75", "100", "125", "150", "175", "200"
+private val VIBRATION_INTENSITIES = arrayOf(
+    Pair(R.string.settings_vibration_intensity_gentle, 10),
+    Pair(R.string.settings_vibration_intensity_mild, 25),
+    Pair(R.string.settings_vibration_intensity_moderate, 50),
+    Pair(R.string.settings_vibration_intensity_standard, 75), // Default
+    Pair(R.string.settings_vibration_intensity_robust, 100),
+    Pair(R.string.settings_vibration_intensity_vigorous, 125),
+    Pair(R.string.settings_vibration_intensity_powerful, 150),
+    Pair(R.string.settings_vibration_intensity_intense, 175),
+    Pair(R.string.settings_vibration_intensity_extreme, 200)
 )
+private val DEFAULT_VALUES = VIBRATION_INTENSITIES.map { it.second.toString() }.toTypedArray()
 
 fun ScalingLazyListScope.vibrationIntensityChip(
     currentMs: Int,
@@ -39,7 +48,8 @@ fun ScalingLazyListScope.vibrationIntensityChip(
         rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             it.data?.let { data ->
                 val results = RemoteInput.getResultsFromIntent(data)
-                newIntensity = (results.getString(VIBRATION_INTENSITY_KEY) ?: DEFAULT_VIBRATION_INTENSITY.toString()).toInt()
+                newIntensity = (results.getString(VIBRATION_INTENSITY_KEY)
+                    ?: DEFAULT_VIBRATION_INTENSITY.toString()).toInt()
                 onChangeVibrationIntensity(newIntensity)
             }
         }
@@ -50,17 +60,21 @@ fun ScalingLazyListScope.vibrationIntensityChip(
         onClick = { launcher.launch(createIntent(label)) },
         label = {
             Text(
-                text = stringResource(id = R.string.settings_vibration_intensity_title), maxLines = 1
+                text = stringResource(id = R.string.settings_vibration_intensity_title),
+                maxLines = 1
             )
         },
-
         secondaryLabel = {
-            Text(text = newIntensity.toString())
+            Text(
+                text = VIBRATION_INTENSITIES.find { it.second == newIntensity }?.let {
+                    stringResource(id = it.first)
+                } ?: newIntensity.toString()
+            )
         },
         colors = ChipDefaults.secondaryChipColors(),
         icon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_vibration_24),
+                painter = painterResource(id = R.drawable.ic_watch_wake_24),
                 contentDescription = null,
                 modifier = Modifier
                     .size(ChipDefaults.SmallIconSize)
