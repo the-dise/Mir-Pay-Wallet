@@ -1,8 +1,10 @@
 # Mir Pay Wallet for Wear OS
 
-<img src="https://github.com/the-dise/Mir-Pay-Companion/blob/main/images/preview.png?raw=true" width="512" height="512">
+<img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/images/preview.png?raw=true" width="512" height="512">
 
 ## Description
+
+[Читать на русском](README.ru.md)
 
 Mir Pay Wallet is an Android application designed to enhance the Mir Pay experience on Wear OS devices. This companion app addresses a specific issue where the screen goes out during a payment transaction, preventing the payment from being completed. Mir Pay Wallet app ensures that the screen remains on until the end of the timer, thereby facilitating successful payments when using Mir Pay on Wear OS watches.
 
@@ -10,6 +12,7 @@ Mir Pay Wallet is an Android application designed to enhance the Mir Pay experie
 
 - Automatic closing of the app when the timer expires.
 - 24 different map designs to suit your taste;
+- Vibration at startup and end of timer for feedback during blind startup;
 - The app includes **Complication**.
 
 ## Cards Design
@@ -19,7 +22,7 @@ Mir Pay Wallet is an Android application designed to enhance the Mir Pay experie
 ## Installation
 
 - **Download**:
-  - Download the latest release of Mir Pay Companion APK from the [Releases](https://github.com/the-dise/Mir-Pay-Wallet/releases) section.
+  - Download the latest release of Mir Pay Wallet APK from the [Releases](https://github.com/the-dise/Mir-Pay-Wallet/releases) section.
 - **Enable Developer Options**:
    - On your Android device, go to Settings.
    - Scroll down and find "About phone" or "About device".
@@ -39,17 +42,17 @@ Ensure ADB is installed on your computer and your network allows communication b
 
 ## Usage
 
-- Open Mir Pay Companion on your Wear OS device.
+- Open Mir Pay Wallet on your Wear OS device.
 - Perform Mir Pay transactions without the screen turning off.
 - After the timer expires, the application will be automatically closed
 
 ## Contributing
 
-If you encounter any issues or have suggestions for improvement, please feel free to open an [issue](https://github.com/the-dise/Mir-Pay-Companion/issues) or submit a [pull request](https://github.com/the-dise/Mir-Pay-Companion/pulls).
+If you encounter any issues or have suggestions for improvement, please feel free to open an [issue](https://github.com/the-dise/Mir-Pay-Wallet/issues) or submit a [pull request](https://github.com/the-dise/Mir-Pay-Wallet/pulls).
 
 ## License
 
-Mir Pay Companion is licensed under the [GPL-3.0 License](https://github.com/the-dise/Mir-Pay-Companion/blob/main/LICENSE).
+Mir Pay Wallet is licensed under the [GPL-3.0 License](https://github.com/the-dise/Mir-Pay-Wallet/blob/main/LICENSE).
 
 ## Acknowledgments
 
