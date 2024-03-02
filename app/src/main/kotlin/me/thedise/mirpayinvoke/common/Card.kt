@@ -84,6 +84,11 @@ enum class Card(
         imageId = R.drawable.card_real_tinkoff_premium,
         colorId = 0xFFFFDE34
     ),
+    TINKOFF_PLATINUM(
+        titleId = R.string.card_real_tinkoff_platinum_title,
+        imageId = R.drawable.card_real_tinkoff_platinum,
+        colorId = 0xFFFFDE34
+    ),
 
     PSB(
         titleId = R.string.card_real_psb_title,

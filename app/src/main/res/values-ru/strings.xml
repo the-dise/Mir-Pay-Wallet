@@ -50,6 +50,7 @@
     <string name="card_real_rshb_title">Россельхозбанк</string>
     <string name="card_real_tinkoff_drive_title">Тинькофф Drive</string>
     <string name="card_real_tinkoff_premium_title">Тинькофф Premium</string>
+    <string name="card_real_tinkoff_platinum_title">Тинькофф Платинум</string>
     <string name="card_real_uralsib_title">Уралсиб</string>
     <string name="card_real_vtb_title">ВТБ</string>
 
