@@ -65,7 +65,13 @@ Mir Pay Wallet is licensed under the [GPL-3.0 License](https://github.com/the-di
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=the-dise/Mir-Pay-Wallet&type=Date)](https://star-history.com/#the-dise/Mir-Pay-Wallet&Date)
+<a href="https://star-history.com/#the-dise/Mir-Pay-Wallet&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=the-dise/Mir-Pay-Wallet&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=the-dise/Mir-Pay-Wallet&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=the-dise/Mir-Pay-Wallet&type=Date" />
+  </picture>
+</a>
 
 ---
 
