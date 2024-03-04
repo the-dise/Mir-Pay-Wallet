@@ -63,6 +63,10 @@ Mir Pay Wallet is licensed under the [GPL-3.0 License](https://github.com/the-di
 - [AndroidX Wear Compose Foundation](https://developer.android.com/jetpack/androidx/releases/wear)
 - [Horologist by Google](https://github.com/google/horologist)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=the-dise/Mir-Pay-Wallet&type=Date)](https://star-history.com/#the-dise/Mir-Pay-Wallet&Date)
+
 ---
 
 <p align="center"><b>Made with ❤️ by Dise</b></p>
