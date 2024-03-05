@@ -48,6 +48,7 @@
     <string name="card_real_psb_title">ПСБ</string>
     <string name="card_real_gazprombank_title">Газпромбанк</string>
     <string name="card_real_rshb_title">Россельхозбанк</string>
+    <string name="card_real_raiffeisen_title">Райффайзен</string>
     <string name="card_real_tinkoff_drive_title">Тинькофф Drive</string>
     <string name="card_real_tinkoff_premium_title">Тинькофф Premium</string>
     <string name="card_real_tinkoff_platinum_title">Тинькофф Платинум</string>

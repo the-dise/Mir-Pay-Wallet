@@ -108,6 +108,12 @@ enum class Card(
         colorId = 0xFFFFD108
     ),
 
+    RAIFFEISEN(
+        titleId = R.string.card_real_raiffeisen_title,
+        imageId = R.drawable.card_real_raiffeisen,
+        colorId = 0xFFFEE600
+    ),
+
     URALSIB(
         titleId = R.string.card_real_uralsib_title,
         imageId = R.drawable.card_real_uralsib,
