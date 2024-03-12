@@ -1,6 +1,6 @@
 # Кошелек Mir Pay для Wear OS
 
-<img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/images/preview.png?raw=true" width="512" height="512">
+<img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/images/preview.png?raw=true" width="512">
 
 ## Описание
 
