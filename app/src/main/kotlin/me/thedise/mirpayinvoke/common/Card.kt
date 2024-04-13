@@ -125,4 +125,10 @@ enum class Card(
         imageId = R.drawable.card_real_vtb,
         colorId = 0xFF0058B9
     ),
+
+    YANDEX(
+        titleId = R.string.card_real_yandex_title,
+        imageId = R.drawable.card_real_yandex,
+        colorId = 0xFFD049A7
+    ),
 }
