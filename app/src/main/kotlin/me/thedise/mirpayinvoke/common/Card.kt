@@ -144,5 +144,11 @@ enum class Card(
         colorId = 0xFF00928F
     ),
 
+    OZON(
+        titleId = R.string.card_real_ozon_title,
+        imageId = R.drawable.card_real_ozon,
+        colorId = 0xFF0060EC
+    ),
+
 
 }
