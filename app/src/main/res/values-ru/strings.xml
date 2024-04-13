@@ -55,5 +55,6 @@
     <string name="card_real_uralsib_title">Уралсиб</string>
     <string name="card_real_vtb_title">ВТБ</string>
     <string name="card_real_yandex_title">Яндекс</string>
+    <string name="card_real_primbank_title">Приморье</string>
 
 </resources>

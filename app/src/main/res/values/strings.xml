@@ -55,5 +55,6 @@
     <string name="card_real_uralsib_title">Uralsib</string>
     <string name="card_real_vtb_title">VTB</string>
     <string name="card_real_yandex_title">Yandex</string>
+    <string name="card_real_primbank_title">Primbank</string>
 
 </resources>

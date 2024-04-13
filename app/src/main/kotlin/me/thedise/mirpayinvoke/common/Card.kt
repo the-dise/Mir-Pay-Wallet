@@ -131,4 +131,10 @@ enum class Card(
         imageId = R.drawable.card_real_yandex,
         colorId = 0xFFD049A7
     ),
+
+    PRIMBANK(
+        titleId = R.string.card_real_primbank_title,
+        imageId = R.drawable.card_real_primbank,
+        colorId = 0xFF00928F
+    ),
 }
