@@ -90,6 +90,12 @@ enum class Card(
         colorId = 0xFFFFDE34
     ),
 
+    TINKOFF_INVEST_BEAR(
+        titleId = R.string.card_real_tinkoff_invest_bear_title,
+        imageId = R.drawable.card_real_tinkoff_invest_bear,
+        colorId = 0xFFFFDE34
+    ),
+
     PSB(
         titleId = R.string.card_real_psb_title,
         imageId = R.drawable.card_real_psb,
@@ -137,4 +143,6 @@ enum class Card(
         imageId = R.drawable.card_real_primbank,
         colorId = 0xFF00928F
     ),
+
+
 }
