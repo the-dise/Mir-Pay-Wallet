@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         setContent {
-            MirPayTheme() {
+            MirPayTheme {
                 WearApp(appStorage = appStorage, context = this@MainActivity, onTimerEnd = {
                     finish() })
             }
