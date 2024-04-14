@@ -17,7 +17,7 @@ Mir Pay Wallet is an Android application designed to enhance the Mir Pay experie
 
 ## Cards Design
 
-![gallery](/images/cards-preview.png)
+You can familiarize yourself with all possible designs here [CARDS.md](https://github.com/the-dise/Mir-Pay-Wallet/blob/main/CARDS.md)
 
 ## Installation
 
