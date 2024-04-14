@@ -102,6 +102,12 @@ enum class Card(
         colorId = 0xFFFFDE34
     ),
 
+    TINKOFF_S7_AIRLINES(
+        titleId = R.string.card_real_tinkoff_s7_airlines_title,
+        imageId = R.drawable.card_real_tinkoff_s7_airlines,
+        colorId = 0xFF37A225
+    ),
+
     PSB(
         titleId = R.string.card_real_psb_title,
         imageId = R.drawable.card_real_psb,
