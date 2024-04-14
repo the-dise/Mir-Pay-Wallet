@@ -69,6 +69,12 @@ enum class Card(
         colorId = 0xFF50BB5A
     ),
 
+    SBERBANK_TYAN_2(
+        titleId = R.string.card_real_sberbank_tyan_2_title,
+        imageId = R.drawable.card_real_sber_tyan_2,
+        colorId = 0xFF50BB5A
+    ),
+
     TINKOFF_BLACK(
         titleId = R.string.card_real_tinkoff_title,
         imageId = R.drawable.card_real_tinkoff_black,

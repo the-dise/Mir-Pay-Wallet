@@ -44,6 +44,7 @@
     <string name="card_real_alpha_title">Alpha</string>
     <string name="card_real_rosbank_title">Rosbank</string>
     <string name="card_real_sberbank_title">SberBank</string>
+    <string name="card_real_sberbank_tyan_2_title">SberBank Tyan 2</string>
     <string name="card_real_tinkoff_title">Tinkoff</string>
     <string name="card_real_psb_title">PSB</string>
     <string name="card_real_gazprombank_title">Gazprombank</string>
