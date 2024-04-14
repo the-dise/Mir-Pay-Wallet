@@ -63,6 +63,12 @@ enum class Card(
         colorId = 0xFF9030A9
     ),
 
+    ROSBANK_SUPREME(
+        titleId = R.string.card_real_rosbank_supreme_title,
+        imageId = R.drawable.card_real_rosbank_supreme,
+        colorId = 0xFF9030A9
+    ),
+
     SBERBANK(
         titleId = R.string.card_real_sberbank_title,
         imageId = R.drawable.card_real_sber,

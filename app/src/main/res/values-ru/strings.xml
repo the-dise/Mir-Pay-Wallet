@@ -43,6 +43,7 @@
     <!-- Real bank cards -->
     <string name="card_real_alpha_title">Альфа Банк</string>
     <string name="card_real_rosbank_title">Росбанк</string>
+    <string name="card_real_rosbank_supreme_title">Росбанк Supreme</string>
     <string name="card_real_sberbank_title">СберБанк</string>
     <string name="card_real_sberbank_tyan_2_title">СберБанк Тян 2</string>
     <string name="card_real_tinkoff_title">Тинькофф</string>
