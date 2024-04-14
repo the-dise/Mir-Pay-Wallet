@@ -4,11 +4,11 @@
 | --- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | 1.  | Light Coral               | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_light_coral.webp" width="128">      |
 | 2.  | Secret Garden             | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_secret_garden.webp" width="128">    |
-| 3.  | spiced_nectarine          | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_spiced_nectarine.webp" width="128"> |
-| 4.  | stargate_shimmer          | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_stargate_shimmer.webp" width="128"> |
-| 5.  | swiss_plum                | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_swiss_plum.webp" width="128">       |
-| 6.  | vega_violet               | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_vega_violet.webp" width="128">      |
-| 7.  | wounder_list              | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_wounder_list.webp" width="128">     |
+| 3.  | Spiced Nectarine          | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_spiced_nectarine.webp" width="128"> |
+| 4.  | Stargate Shimmer          | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_stargate_shimmer.webp" width="128"> |
+| 5.  | Swiss Plum                | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_swiss_plum.webp" width="128">       |
+| 6.  | Vega Violet               | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_vega_violet.webp" width="128">      |
+| 7.  | Wounder List              | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_wounder_list.webp" width="128">     |
 | 8.  | Aplha Bank                | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_alpha.webp" width="128">               |
 | 9.  | Gazprombank               | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_gazprombank.webp" width="128">         |
 | 10. | Ozon Bank                 | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_ozon.webp" width="128">                |
