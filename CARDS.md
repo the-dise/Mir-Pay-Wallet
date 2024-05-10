@@ -9,7 +9,7 @@
 | 5.  | Swiss Plum                | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_swiss_plum.webp" width="128">       |
 | 6.  | Vega Violet               | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_vega_violet.webp" width="128">      |
 | 7.  | Wounder List              | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_default_wounder_list.webp" width="128">     |
-| 8.  | Aplha Bank                | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_alpha.webp" width="128">               |
+| 8.  | Alpha Bank                | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_alpha.webp" width="128">               |
 | 9.  | Gazprombank               | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_gazprombank.webp" width="128">         |
 | 10. | Ozon Bank                 | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_ozon.webp" width="128">                |
 | 11. | Primbank                  | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_primbank.webp" width="128">            |
