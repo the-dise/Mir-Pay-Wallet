@@ -168,5 +168,9 @@ enum class Card(
         colorId = 0xFF0060EC
     ),
 
-
+    MTS(
+        titleId = R.string.card_real_mts_title,
+        imageId = R.drawable.card_real_mts_bank,
+        colorId = 0xFFE10414
+    )
 }

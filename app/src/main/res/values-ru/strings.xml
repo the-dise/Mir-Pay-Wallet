@@ -61,5 +61,6 @@
     <string name="card_real_yandex_title">Яндекс</string>
     <string name="card_real_primbank_title">Приморье</string>
     <string name="card_real_ozon_title">Ozon Банк</string>
+    <string name="card_real_mts_title">МТС Банк</string>
 
 </resources>
