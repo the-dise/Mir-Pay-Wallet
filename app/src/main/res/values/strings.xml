@@ -63,4 +63,6 @@
     <string name="card_real_ozon_title">Ozon Bank</string>
     <string name="card_real_mts_title">MTS Bank</string>
 
+    <!-- Accessibility service -->
+    <string name="accessibility_text">Launch Mir Pay Wallet when Google Pay app is opened</string>
 </resources>
