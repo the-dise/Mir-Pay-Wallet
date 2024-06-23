@@ -62,5 +62,6 @@
     <string name="card_real_primbank_title">Приморье</string>
     <string name="card_real_ozon_title">Ozon Банк</string>
     <string name="card_real_mts_title">МТС Банк</string>
+    <string name="accessibility_text">Открывать Mir Pay Кошелёк при запуске Google Pay</string>
 
 </resources>
