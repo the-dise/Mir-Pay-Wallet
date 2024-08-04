@@ -23,6 +23,15 @@
 | 19. | Tinkoff Invest Bear       | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_tinkoff_invest_bear.webp" width="128"> |
 | 20. | Tinkoff Platinum          | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_tinkoff_platinum.webp" width="128">    |
 | 21. | Tinkoff Premium           | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_tinkoff_premium.webp" width="128">     |
-| 22. | Uralsib                   | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_uralsib.webp" width="128">             |
-| 23. | VTB                       | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_vtb.webp" width="128">                 |
-| 24. | Yandex                    | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yandex.webp" width="128">              |
+| 22. | Tinkoff Friends           | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_tinkoff_friends.webp" width="128">     |
+| 23. | Tinkoff Pomegranate       | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_tinkoff_pomegranate.webp" width="128"> |
+| 24. | Uralsib                   | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_uralsib.webp" width="128">             |
+| 25. | VTB                       | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_vtb.webp" width="128">                 |
+| 26. | Yandex                    | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yandex.webp" width="128">              |
+| 27. | YooMoney Black            | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_black.webp" width="128">      |
+| 28. | YooMoney Violet           | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_violet.webp" width="128">     |
+| 29. | YooMoney Gaming           | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_gaming.webp" width="128">     |
+| 30. | YooMoney Graffiti         | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_graffiti.webp" width="128">   |
+| 31. | YooMoney Minecraft        | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_minecraft.webp" width="128">  |
+| 32. | YooMoney Kids             | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_kids.webp" width="128">       |
+| 33. | YooMoney Kids 2           | <img src="https://github.com/the-dise/Mir-Pay-Wallet/blob/main/app/src/main/res/drawable/card_real_yoomoney_kids_2.webp" width="128">     |
