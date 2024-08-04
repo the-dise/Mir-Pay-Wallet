@@ -19,6 +19,8 @@
     <string name="settings_vibrate_every_second_label">Постоянно</string>
     <string name="settings_vibrate_every_second_secondary">Ежесекундно</string>
     <string name="settings_vibration_intensity_title">Интенсивность вибрации</string>
+    <string name="settings_about">О приложении</string>
+    <string name="settings_app_version">Версия</string>
 
     <!-- Vibration intensities -->
     <string name="settings_vibration_intensity_gentle">Нежная</string>

@@ -19,6 +19,8 @@
     <string name="settings_vibrate_every_second_label">Continuous</string>
     <string name="settings_vibrate_every_second_secondary">Every second</string>
     <string name="settings_vibration_intensity_title">Intensity</string>
+    <string name="settings_about">About</string>
+    <string name="settings_app_version">Version</string>
 
     <!-- Vibration intensities -->
     <string name="settings_vibration_intensity_gentle">Gentle</string>

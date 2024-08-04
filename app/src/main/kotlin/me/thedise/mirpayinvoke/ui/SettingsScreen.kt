@@ -24,6 +24,7 @@ import me.thedise.mirpayinvoke.ui.theme.MirPayTheme
 import me.thedise.mirpayinvoke.ui.widgets.cardChip
 import me.thedise.mirpayinvoke.ui.widgets.hapticChip
 import me.thedise.mirpayinvoke.ui.widgets.timerChip
+import me.thedise.mirpayinvoke.ui.widgets.versionChip
 import me.thedise.mirpayinvoke.ui.widgets.vibrateEverySecondChip
 import me.thedise.mirpayinvoke.ui.widgets.vibrationIntensityChip
 
@@ -96,6 +97,16 @@ fun SettingsScreen(
                     currentMs = vibrationIntensity,
                     onChangeVibrationIntensity = onChangeVibrationIntensity,
                 )
+
+                item {
+                    ListHeader {
+                        Text(
+                            text = stringResource(R.string.settings_about)
+                        )
+                    }
+                }
+                
+                versionChip()
             }
         }
     }
