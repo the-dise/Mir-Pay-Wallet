@@ -86,20 +86,29 @@ enum class Card(
         imageId = R.drawable.card_real_tinkoff_black,
         colorId = 0xFFFFDE34
     ),
+
     TINKOFF_DRIVE(
         titleId = R.string.card_real_tinkoff_drive_title,
         imageId = R.drawable.card_real_tinkoff_drive,
         colorId = 0xFFFFDE34
     ),
+
     TINKOFF_PREMIUM(
         titleId = R.string.card_real_tinkoff_premium_title,
         imageId = R.drawable.card_real_tinkoff_premium,
         colorId = 0xFFFFDE34
     ),
+
     TINKOFF_PLATINUM(
         titleId = R.string.card_real_tinkoff_platinum_title,
         imageId = R.drawable.card_real_tinkoff_platinum,
         colorId = 0xFFFFDE34
+    ),
+
+    TINKOFF_FRIENDS(
+        titleId = R.string.card_real_tinkoff_friends_title,
+        imageId = R.drawable.card_real_tinkoff_friends,
+        colorId = 0xFF8A30C3
     ),
 
     TINKOFF_INVEST_BEAR(
@@ -112,6 +121,12 @@ enum class Card(
         titleId = R.string.card_real_tinkoff_s7_airlines_title,
         imageId = R.drawable.card_real_tinkoff_s7_airlines,
         colorId = 0xFF37A225
+    ),
+
+    TINKOFF_POMEGRANATE(
+        titleId = R.string.card_real_tinkoff_pomegranate_title,
+        imageId = R.drawable.card_real_tinkoff_pomegranate,
+        colorId = 0xFF88257B
     ),
 
     PSB(
@@ -154,6 +169,48 @@ enum class Card(
         titleId = R.string.card_real_yandex_title,
         imageId = R.drawable.card_real_yandex,
         colorId = 0xFFD049A7
+    ),
+
+    YOOMONEY_BLACK(
+        titleId = R.string.card_real_yoomoney_black_title,
+        imageId = R.drawable.card_real_yoomoney_black,
+        colorId = 0xFF707070
+    ),
+
+    YOOMONEY_VIOLET(
+        titleId = R.string.card_real_yoomoney_violet_title,
+        imageId = R.drawable.card_real_yoomoney_violet,
+        colorId = 0xFF6F25E9
+    ),
+
+    YOOMONEY_GAMING(
+        titleId = R.string.card_real_yoomoney_gaming_title,
+        imageId = R.drawable.card_real_yoomoney_gaming,
+        colorId = 0xFF61177C
+    ),
+
+    YOOMONEY_GRAFFITI(
+        titleId = R.string.card_real_yoomoney_graffiti_title,
+        imageId = R.drawable.card_real_yoomoney_graffiti,
+        colorId = 0xFF300066
+    ),
+
+    YOOMONEY_MINECRAFT(
+        titleId = R.string.card_real_yoomoney_minecraft_title,
+        imageId = R.drawable.card_real_yoomoney_minecraft,
+        colorId = 0xFF3F7C31
+    ),
+
+    YOOMONEY_KIDS(
+        titleId = R.string.card_real_yoomoney_kids_title,
+        imageId = R.drawable.card_real_yoomoney_kids,
+        colorId = 0xFFFE7738
+    ),
+
+    YOOMONEY_KIDS_2(
+        titleId = R.string.card_real_yoomoney_kids_2_title,
+        imageId = R.drawable.card_real_yoomoney_kids_2,
+        colorId = 0xFFA0EB00
     ),
 
     PRIMBANK(
