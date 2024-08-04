@@ -23,6 +23,7 @@ import me.thedise.mirpayinvoke.common.Card
 import me.thedise.mirpayinvoke.ui.theme.MirPayTheme
 import me.thedise.mirpayinvoke.ui.widgets.cardChip
 import me.thedise.mirpayinvoke.ui.widgets.hapticChip
+import me.thedise.mirpayinvoke.ui.widgets.listHeaderItem
 import me.thedise.mirpayinvoke.ui.widgets.timerChip
 import me.thedise.mirpayinvoke.ui.widgets.versionChip
 import me.thedise.mirpayinvoke.ui.widgets.vibrateEverySecondChip
@@ -58,13 +59,8 @@ fun SettingsScreen(
                     .rotaryWithScroll(scrollableState = state),
                 state = state,
             ) {
-                item {
-                    ListHeader {
-                        Text(
-                            text = stringResource(R.string.settings_title)
-                        )
-                    }
-                }
+
+                listHeaderItem(R.string.settings_title)
 
                 timerChip(
                     currentTicks = timerTicks,
@@ -75,13 +71,7 @@ fun SettingsScreen(
                     currentCard = card, onChangeCard = onChangeCard
                 )
 
-                item {
-                    ListHeader {
-                        Text(
-                            text = stringResource(R.string.settings_haptic_feedback)
-                        )
-                    }
-                }
+                listHeaderItem(R.string.settings_haptic_feedback)
 
                 hapticChip(
                     onToggleHaptic = onToggleHaptic,
@@ -98,13 +88,7 @@ fun SettingsScreen(
                     onChangeVibrationIntensity = onChangeVibrationIntensity,
                 )
 
-                item {
-                    ListHeader {
-                        Text(
-                            text = stringResource(R.string.settings_about)
-                        )
-                    }
-                }
+                listHeaderItem(R.string.settings_about)
                 
                 versionChip()
             }
