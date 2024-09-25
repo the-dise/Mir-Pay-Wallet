@@ -52,7 +52,7 @@ fun ScalingLazyListScope.vibrateEverySecondChip(
         },
         appIcon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_every_seconds_24),
+                painter = painterResource(id = R.drawable.ic_repeat_24),
                 contentDescription = null,
                 modifier = Modifier
                     .size(ChipDefaults.SmallIconSize)

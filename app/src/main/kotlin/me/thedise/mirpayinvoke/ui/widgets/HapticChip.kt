@@ -52,7 +52,7 @@ fun ScalingLazyListScope.hapticChip(
         },
         appIcon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_vibration_24),
+                painter = painterResource(id = R.drawable.ic_watch_vibration_24),
                 contentDescription = null,
                 modifier = Modifier
                     .size(ChipDefaults.SmallIconSize)

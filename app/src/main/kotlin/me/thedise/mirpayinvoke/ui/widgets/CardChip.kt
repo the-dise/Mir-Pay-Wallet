@@ -57,7 +57,7 @@ fun ScalingLazyListScope.cardChip(
         colors = ChipDefaults.secondaryChipColors(),
         icon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_card_24),
+                painter = painterResource(id = R.drawable.ic_credit_card_24),
                 contentDescription = null,
                 modifier = Modifier
                     .size(ChipDefaults.SmallIconSize)
