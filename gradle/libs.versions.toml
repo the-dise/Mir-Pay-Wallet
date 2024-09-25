@@ -1,0 +1,44 @@
+[versions]
+activity-compose = "1.9.2"
+agp = "8.6.1"
+appcompat = "1.7.0"
+compose-bom = "2024.09.02"
+compose-foundation = "1.4.0"
+core-ktx = "1.13.1"
+core-splashscreen = "1.0.1"
+horologist-compose-layout = "0.6.20"
+kotlin = "1.9.24"
+material-icons-ex = "1.7.2"
+palette-ktx = "1.0.0"
+play-services-wearable = "18.2.0"
+ui-tooling-preview = "1.7.2"
+watchface-complications-data-source-ktx = "1.2.1"
+wear-input = "1.2.0-alpha02"
+wear-tooling-preview = "1.0.0"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+androidx-compose-foundation = { module = "androidx.wear.compose:compose-foundation", version.ref = "compose-foundation" }
+androidx-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "compose-foundation" }
+androidx-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "compose-foundation" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
+androidx-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "material-icons-ex" }
+androidx-palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "palette-ktx" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "ui-tooling-preview" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-wear-input = { module = "androidx.wear:wear-input", version.ref = "wear-input" }
+androidx-watchface-complications-data-source-ktx = { module = "androidx.wear.watchface:watchface-complications-data-source-ktx", version.ref = "watchface-complications-data-source-ktx" }
+androidx-wear-tooling-preview = { module = "androidx.wear:wear-tooling-preview", version.ref = "wear-tooling-preview" }
+horologist-compose-layout = { module = "com.google.android.horologist:horologist-compose-layout", version.ref = "horologist-compose-layout" }
+play-services-wearable = { module = "com.google.android.gms:play-services-wearable", version.ref = "play-services-wearable" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
