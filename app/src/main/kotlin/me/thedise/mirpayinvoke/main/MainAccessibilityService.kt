@@ -10,7 +10,11 @@ class MainAccessibilityService : AccessibilityService() {
     @SuppressLint("WearRecents")
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
         if (event != null) {
-            if (event.packageName?.equals("com.google.android.apps.walletnfcrel")!!) {
+            val isTargetEvent : Boolean =
+                event.packageName?.equals("com.google.android.apps.walletnfcrel")!! ||
+                event.packageName?.equals("com.samsung.android.samsungpay.gear")!!;
+
+            if (isTargetEvent) {
                 performGlobalAction(GLOBAL_ACTION_BACK);
                 val intent = packageManager.getLaunchIntentForPackage(packageName);
                 if (intent != null) {

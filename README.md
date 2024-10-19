@@ -14,6 +14,7 @@ Mir Pay Wallet is an Android application designed to enhance the Mir Pay experie
 - 24 different map designs to suit your taste;
 - Vibration at startup and end of timer for feedback during blind startup;
 - The app includes **Complication**.
+- Automatic nfc activation (see point **Nfc**)
 
 ## Cards Design
 
@@ -36,7 +37,10 @@ You can familiarize yourself with all possible designs here [CARDS.md](https://g
    - On your computer, open a terminal or command prompt.
    - Enter the following command: `adb connect <device_ip_address>` (replace `<device_ip_address>` with the IP address of your Android device).
 - **Install APK:**
-  - Use the command `adb install <path_to_apk>` in the terminal or command prompt  
+  - Use the command `adb install <path_to_apk>` in the terminal or command prompt
+- **[Optional] Setting up automatic nfc activation (see point **Nfc**):**
+  - Use the command `adb shell pm grant me.thedise.mirpayinvoke android.permission.WRITE_SECURE_SETTINGS` in the terminal or command line.
+  - If you change your mind, you can revoke the permissions with the command `adb shell pm revoke me.thedise.mirpayinvoke android.permission.WRITE_SECURE_SETTINGS`.
 
 Ensure ADB is installed on your computer and your network allows communication between the devices.
 
@@ -45,6 +49,24 @@ Ensure ADB is installed on your computer and your network allows communication b
 - Open Mir Pay Wallet on your Wear OS device.
 - Perform Mir Pay transactions without the screen turning off.
 - After the timer expires, the application will be automatically closed
+
+## Nfc
+
+There is also a way to automatically turn on the NFC module when opening the application, however, special permissions must be granted for this.
+
+The fact is that nfc activation/deactivation is part of the system API, which, for security reasons, is not available to ordinary developers.
+
+This is well explained in the project [nfc-quick-settings](https://github.com/pcolby/nfc-quick-settings/tree/main?tab=readme-ov-file#advanced-mode).
+
+_If you do not set up automatic NFC activation, the application will work normally._
+
+### Additional functions
+
+- Automatic NFC activation when opening the application.
+- Automatic deactivation of NFC when closing the application*.
+- Checking the active nfc during the timer operation.
+
+_*If NFC was activated before logging into the application (in advance), then after its completion, it will not be deactivated._
 
 ## Contributing
 

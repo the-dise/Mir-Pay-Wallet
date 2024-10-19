@@ -31,6 +31,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import me.thedise.mirpayinvoke.common.Card
+import me.thedise.mirpayinvoke.common.Nfc
 import me.thedise.mirpayinvoke.ui.widgets.AnimatedCounter
 import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 
@@ -38,6 +39,7 @@ import me.thedise.mirpayinvoke.ui.widgets.LogoBlock
 @Composable
 fun MirPayScreen(
     context: Context,
+    nfc: Nfc?,
     maxTicks: Int,
     card: Card,
     vibrationIntensity: Int,
@@ -103,6 +105,8 @@ fun MirPayScreen(
                 delay(1000)
                 currentTicks++
 
+                nfc?.tryEnableNfc();
+
                 if (onToggleHaptic and onToggleVibrateEverySecond) {
                     vibrator.vibrate(vibrationEffect)
                 }
@@ -133,6 +137,7 @@ fun MirPayScreenPreview() {
     val context = LocalContext.current // Get the current context
     MirPayScreen(
         context = context,
+        nfc = null,
         maxTicks = 15,
         card = Card.DEFAULT,
         vibrationIntensity = 100,

@@ -20,11 +20,12 @@ import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavHostState
 import me.thedise.mirpayinvoke.common.AppStorage
+import me.thedise.mirpayinvoke.common.Nfc
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun WearApp(
-    appStorage: AppStorage, context: Context, onTimerEnd: () -> Unit
+    appStorage: AppStorage, context: Context, onTimerEnd: () -> Unit, nfc: Nfc?
 ) {
     val navController = rememberSwipeDismissableNavController()
     val swipeToDismissBoxState = rememberSwipeToDismissBoxState()
@@ -55,6 +56,7 @@ fun WearApp(
                         when (page) {
                             0 -> MirPayScreen(
                                 context = context,
+                                nfc = nfc,
                                 maxTicks = appStorage.timerTicks,
                                 card = appStorage.card,
                                 vibrationIntensity = appStorage.vibrationIntensity,
